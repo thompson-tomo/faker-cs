@@ -74,6 +74,7 @@
     <Compile Include="Extensions\ArrayExtensions.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Identification.cs" />
     <Compile Include="Internet.cs" />
     <Compile Include="Lorem.cs" />
     <Compile Include="Name.cs" />
