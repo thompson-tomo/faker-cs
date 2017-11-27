@@ -10,7 +10,7 @@ Get the code via git:
 
     git clone git://github.com/slashdotdash/faker-cs.git
 
-Supported versiom:
+Supported versions:
 
 	.NET framework 3.5 SP1,
 	.NET framework 4.0,
@@ -19,4 +19,4 @@ Supported versiom:
 	Silverlight 5.0,
 	Windows Phone 7,
 	Windows Phone 7.1,
-
+	.NET Standard 2.0
