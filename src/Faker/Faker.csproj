@@ -69,8 +69,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Address.cs" />
+    <Compile Include="Boolean.cs" />
     <Compile Include="Company.cs" />
     <Compile Include="Config.cs" />
+    <Compile Include="Enum.cs" />
     <Compile Include="Extensions\ArrayExtensions.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />

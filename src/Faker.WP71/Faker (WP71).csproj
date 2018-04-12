@@ -52,11 +52,17 @@
     <Compile Include="..\Faker\Address.cs">
       <Link>Address.cs</Link>
     </Compile>
+    <Compile Include="..\Faker\Boolean.cs">
+      <Link>Boolean.cs</Link>
+    </Compile>
     <Compile Include="..\Faker\Company.cs">
       <Link>Company.cs</Link>
     </Compile>
     <Compile Include="..\Faker\Config.cs">
       <Link>Config.cs</Link>
+    </Compile>
+    <Compile Include="..\Faker\Enum.cs">
+      <Link>Enum.cs</Link>
     </Compile>
     <Compile Include="..\Faker\Extensions\ArrayExtensions.cs">
       <Link>Extensions\ArrayExtensions.cs</Link>
