@@ -29,7 +29,7 @@ namespace Faker
         /// </summary>        
         public static string FullName(NameFormats format)
         {
-            return String.Join(" ", _formatMap[format].Invoke());
+            return string.Join(" ", _formatMap[format].Invoke());
         }
 
         public static string First()

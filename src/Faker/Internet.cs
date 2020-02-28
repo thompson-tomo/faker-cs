@@ -10,17 +10,17 @@ namespace Faker
     {
         public static string Email()
         {
-            return String.Format("{0}@{1}", UserName(), DomainName());
+            return $"{UserName()}@{DomainName()}";
         }
 
         public static string Email(string name)
         {
-            return String.Format("{0}@{1}", UserName(name), DomainName());
+            return $"{UserName(name)}@{DomainName()}";
         }
 
         public static string FreeEmail()
         {
-            return String.Format("{0}@{1}", UserName(), Resources.Internet.FreeMail.Split(Config.Separator).Random());
+            return $"{UserName()}@{Resources.Internet.FreeMail.Split(Config.Separator).Random()}";
         }
 
         public static string UserName()
@@ -35,7 +35,7 @@ namespace Faker
 
         public static string DomainName()
         {
-            return String.Format("{0}.{1}", DomainWord(), DomainSuffix());
+            return $"{DomainWord()}.{DomainSuffix()}";
         }
 
         public static string DomainWord()
@@ -51,8 +51,7 @@ namespace Faker
         private static readonly IEnumerable<Func<string>> _userNameFormats = new List<Func<string>>
         {
             () => Name.First().AlphanumericOnly().ToLowerInvariant(),
-            () => string.Format("{0}{1}{2}", Name.First().AlphanumericOnly(), 
-                new [] { ".", "_" }.Random(), Name.Last().AlphanumericOnly()).ToLowerInvariant()
+            () => $"{Name.First().AlphanumericOnly()}{new[] {".", "_"}.Random()}{Name.Last().AlphanumericOnly()}".ToLowerInvariant()
         };
     }
 }

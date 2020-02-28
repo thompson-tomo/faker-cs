@@ -16,9 +16,28 @@ namespace Faker
             return Resources.Address.ZipCode.Split(Config.Separator).Random().Trim().Numerify();
         }
 
+        public static string UsMilitaryState()
+        {
+            return Resources.Address.UsMilitaryState.Split(Config.Separator).Random().Trim();
+        }
+
+        public static string UsMilitaryStateAbbr()
+        {
+            return Resources.Address.UsMilitaryStateAbbr.Split(Config.Separator).Random();
+        }
+
+        public static string UsTerritory()
+        {
+            return Resources.Address.UsTerritory.Split(Config.Separator).Random().Trim();
+        }
+
+        public static string UsTerritoryStateAbbr()
+        {
+            return Resources.Address.UsTerritoryAbbr.Split(Config.Separator).Random();
+        }
+
         public static string UsState()
         {
-
             return Resources.Address.UsState.Split(Config.Separator).Random().Trim();
         }
 
@@ -32,9 +51,9 @@ namespace Faker
             return Resources.Address.CityPrefix.Split(Config.Separator).Random();
         }
 
-        public static string CitySufix()
+        public static string CitySuffix()
         {
-            return Resources.Address.CitySufix.Split(Config.Separator).Random();
+            return Resources.Address.CitySuffix.Split(Config.Separator).Random();
         }
 
         public static string City()
@@ -49,15 +68,10 @@ namespace Faker
 
         public static string StreetName()
         {
-            return String.Join(Resources.Address.StreetNameSeparator, _streetFormats.Random());
-        }
-        
-        public static string StreetAddress()
-        {
-            return StreetAddress(false);
+            return string.Join(Resources.Address.StreetNameSeparator, _streetFormats.Random());
         }
 
-        public static string StreetAddress(bool includeSecondary)
+        public static string StreetAddress(bool includeSecondary = false)
         {
             return _streetAddressFormats.Random().Numerify() + (includeSecondary ? " " + SecondaryAddress() : "");
         }
@@ -85,10 +99,10 @@ namespace Faker
         #region Format Mappings
         private static readonly IEnumerable<Func<string>> _cityFormats = new List<Func<string>>
         {
-            () => string.Format("{0} {1}{2}", CityPrefix(), Name.First(), CitySufix()),
-            () => string.Format("{0} {1}", CityPrefix(), Name.First()),
-            () => string.Format("{0}{1}", Name.First(), CitySufix()),
-            () => string.Format("{0}{1}", Name.Last(), CitySufix())
+            () => $"{CityPrefix()} {Name.First()}{CitySuffix()}",
+            () => $"{CityPrefix()} {Name.First()}",
+            () => $"{Name.First()}{CitySuffix()}",
+            () => $"{Name.Last()}{CitySuffix()}"
         };
 
         private static readonly IEnumerable<Func<string[]>> _streetFormats = new List<Func<string[]>>

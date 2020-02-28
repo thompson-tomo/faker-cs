@@ -81,7 +81,7 @@ namespace Faker.Resources {
         /// <summary>
         ///   Looks up a localized string similar to town;ton;land;ville;berg;burgh;borough;bury;view;port;mouth;stad;furt;chester;mouth;fort;haven;side;shire.
         /// </summary>
-        internal static string CitySufix {
+        internal static string CitySuffix {
             get {
                 return ResourceManager.GetString("CitySufix", resourceCulture);
             }
@@ -158,7 +158,34 @@ namespace Faker.Resources {
                 return ResourceManager.GetString("UsState", resourceCulture);
             }
         }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Armed Forces America.
+        /// </summary>
+        internal static string UsMilitaryState {
+            get {
+                return ResourceManager.GetString("UsMilitaryState", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Puerto Rico [!SHOULD BE A STATE!], Palau District of Columbia
+        /// </summary>
+        internal static string UsTerritory {
+            get {
+                return ResourceManager.GetString("UsTerritory", resourceCulture);
+            }
+        }
         
+        /// <summary>
+        ///   Looks up a localized string similar to PR;UM.
+        /// </summary>
+        internal static string UsTerritoryAbbr {
+            get {
+                return ResourceManager.GetString("UsTerritoryAbbr", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to AL;AK;AS;AZ;AR;CA;CO;CT;DE;DC;FM;FL;GA;GU;HI;ID;IL;IN;IA;KS;KY;LA;ME;MH;MD;MA;MI;MN;MS;MO;MT;NE;NV;NH;NJ;NM;NY;NC;ND;MP;OH;OK;OR;PW;PA;PR;RI;SC;SD;TN;TX;UT;VT;VI;VA;WA;WV;WI;WY;AE;AA;AP.
         /// </summary>
@@ -174,6 +201,15 @@ namespace Faker.Resources {
         internal static string ZipCode {
             get {
                 return ResourceManager.GetString("ZipCode", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to AE;AA;AP.
+        /// </summary>
+        internal static string UsMilitaryStateAbbr {
+            get {
+                return ResourceManager.GetString("UsMilitaryStateAbbr", resourceCulture);
             }
         }
     }
