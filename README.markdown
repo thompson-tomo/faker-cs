@@ -10,6 +10,16 @@ Get the code via git:
 
     git clone git://github.com/slashdotdash/faker-cs.git
 
+Example code 
+```csharp
+var name = Faker.Name.FullName(); // Tod Yundt
+var firstName = Faker.Name.First(); // Orlando
+var lastName = Faker.Name.Last(); // Brekke
+var address = Faker.Address.StreetAddress(); // 713 Pfeffer Bridge
+var city = Faker.Address.City(); // Reynaton
+var number = Faker.RandomNumber.Next(100); // 30
+```
+
 Supported versions:
 
 	.NET framework 4.0,
