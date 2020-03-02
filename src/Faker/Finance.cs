@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Threading;
 
 namespace Faker
 {
     public static class Finance
     {
         private const string SecurityCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        private const string TickerCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        private static readonly CultureInfo UsCulture = new CultureInfo("en-US");
 
         public static string Isin()
         {
@@ -14,6 +18,31 @@ namespace Faker
             var checkSum = CalculateChecksum(securityIdentifier);
 
             return $"{securityIdentifier}{checkSum}";
+        }
+
+        public static string Ticker()
+        {
+            var length = RandomNumber.Next(2, 4);
+
+            return new string(Enumerable.Repeat(TickerCharacters, length)
+                .Select(s => s[RandomNumber.Next(s.Length)]).ToArray());
+        }
+
+        public static DateTime Maturity(int minimumMaturityInMonths = 6, int maximumMaturityInMonths = 180)
+        {
+            var months = RandomNumber.Next(minimumMaturityInMonths, maximumMaturityInMonths);
+            var days = RandomNumber.Next(1, 28);
+            var date = DateTime.Now.Date.AddMonths(months).AddDays(days);
+
+            return date;
+        }
+
+        public static decimal Coupon()
+        {
+            var minor = RandomNumber.Next(0, 1000);
+            var major = RandomNumber.Next(0, 12) * 1000;
+
+            return decimal.Round(Convert.ToDecimal(major + minor) / 1000, 3);
         }
 
         private static string SecurityIdentifier()
@@ -60,7 +89,8 @@ namespace Faker
                         return 38;
                 }
 
-            throw new ArgumentOutOfRangeException(nameof(c), @"Specified character is not a letter, digit or allowed symbol.");
+            throw new ArgumentOutOfRangeException(nameof(c),
+                @"Specified character is not a letter, digit or allowed symbol.");
         }
 
         private static bool IsEven(this int x)
@@ -107,6 +137,55 @@ namespace Faker
         private static int TensComplement(this int value)
         {
             return (10 - value % 10) % 10;
+        }
+
+        public static class Credit
+        {
+            public struct Bond
+            {
+                private readonly string _toString;
+
+                public string Ticker { get; }
+
+                public decimal Coupon { get; }
+
+                public DateTime Maturity { get; }
+
+                internal Bond(string ticker, decimal coupon, DateTime maturity, string format)
+                {
+                    Ticker = ticker;
+                    Coupon = coupon;
+                    Maturity = maturity;
+
+                    var maturityString = Maturity.ToString(format);
+                    _toString = $"{Ticker} {Coupon} {maturityString}";
+                }
+
+                public override string ToString()
+                {
+                    return _toString;
+            }
+            }
+
+            public static string BondName()
+            {
+                return BondClass().ToString();
+            }
+
+            public static Bond BondClass()
+            {
+                var ticker = Ticker();
+                var coupon = Coupon();
+                var maturity = Maturity();
+
+                if (Equals(Thread.CurrentThread.CurrentCulture, UsCulture) ||
+                    Equals(Thread.CurrentThread.CurrentUICulture, UsCulture))
+                {
+                    return new Bond(ticker, coupon, maturity, "MM/dd/yy");
+                }
+
+                return new Bond(ticker, coupon, maturity, "dd/MM/yy");
+            }
         }
     }
 }
