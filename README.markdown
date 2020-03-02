@@ -2,8 +2,6 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/uy628dn0tfl0triy?svg=true)](https://ci.appveyor.com/project/oriches/faker-cs)
 
-As with all my 'important' stuff it builds using the amazing [AppVeyor](https://ci.appveyor.com/project/oriches/faker-cs).
-
 C# port of the Ruby Faker gem (http://faker.rubyforge.org/) and is used to easily generate fake data:
 
 	addresses (UK, US),
