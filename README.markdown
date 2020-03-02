@@ -1,6 +1,8 @@
-#Faker
+# Simple.Wpf.Exceptions
 
-[![Build status](https://ci.appveyor.com/api/github/webhook?id=wy4ph4fajqcnbvu8?svg=true)](https://ci.appveyor.com/project/oriches/faker-cs)
+[![Build status](https://ci.appveyor.com/api/projects/status/72staf3ivfet3699?svg=true)](https://ci.appveyor.com/project/oriches/simple-wpf-exceptions)
+
+As with all my 'important' stuff it builds using the amazing [AppVeyor](https://ci.appveyor.com/project/oriches/faker-cs).
 
 C# port of the Ruby Faker gem (http://faker.rubyforge.org/) and is used to easily generate fake data:
 
