@@ -1,5 +1,4 @@
-Faker
-=====
+# Faker
 
 [![Build status](https://ci.appveyor.com/api/github/webhook?id=wy4ph4fajqcnbvu8?svg=true)](https://ci.appveyor.com/project/oriches/faker-cs)
 
