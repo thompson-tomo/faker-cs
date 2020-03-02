@@ -7,7 +7,7 @@ namespace Faker.Extensions
     public static class ArrayExtensions
     {
         /// <summary>
-        /// Select a random element from the array.
+        ///     Select a random element from the array.
         /// </summary>
         public static string Random(this string[] list)
         {
@@ -17,7 +17,7 @@ namespace Faker.Extensions
         }
 
         /// <summary>
-        /// Select a random string from the Enumerable list.
+        ///     Select a random string from the Enumerable list.
         /// </summary>
         public static string Random(this IEnumerable<Func<string>> list)
         {
@@ -27,7 +27,7 @@ namespace Faker.Extensions
         }
 
         /// <summary>
-        /// Select a random string array from the Enumerable list.
+        ///     Select a random string array from the Enumerable list.
         /// </summary>
         public static string[] Random(this IEnumerable<Func<string[]>> list)
         {

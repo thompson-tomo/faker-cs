@@ -5,7 +5,6 @@ using Faker.Extensions;
 
 namespace Faker
 {
-
     public enum NameFormats
     {
         Standard,
@@ -15,21 +14,34 @@ namespace Faker
 
     public static class Name
     {
+        private static readonly IEnumerable<NameFormats> Formats = new List<NameFormats>
+        {
+            NameFormats.WithPrefix, NameFormats.WithSuffix, NameFormats.Standard, NameFormats.Standard,
+            NameFormats.Standard, NameFormats.Standard, NameFormats.Standard, NameFormats.Standard, NameFormats.Standard
+        };
+
+        private static readonly IDictionary<NameFormats, Func<string[]>> FormatMap =
+            new Dictionary<NameFormats, Func<string[]>>
+            {
+                {NameFormats.Standard, () => new[] {First(), Last()}},
+                {NameFormats.WithPrefix, () => new[] {Prefix(), First(), Last()}},
+                {NameFormats.WithSuffix, () => new[] {First(), Last(), Suffix()}}
+            };
 
         /// <summary>
-        /// Create a name using a random format.
-        /// </summary>     
+        ///     Create a name using a random format.
+        /// </summary>
         public static string FullName()
         {
-            return FullName(_formats.ElementAt(RandomNumber.Next(_formats.Count() - 1)));
+            return FullName(Formats.ElementAt(RandomNumber.Next(Formats.Count() - 1)));
         }
 
         /// <summary>
-        /// Create a name using a specified format.
-        /// </summary>        
+        ///     Create a name using a specified format.
+        /// </summary>
         public static string FullName(NameFormats format)
         {
-            return string.Join(" ", _formatMap[format].Invoke());
+            return string.Join(" ", FormatMap[format].Invoke());
         }
 
         public static string First()
@@ -51,18 +63,5 @@ namespace Faker
         {
             return Resources.Name.Suffix.Split(Config.Separator).Random();
         }
-
-        #region Format Mappings
-        private static readonly IEnumerable<NameFormats> _formats = new List<NameFormats>
-        {
-            NameFormats.WithPrefix, NameFormats.WithSuffix, NameFormats.Standard, NameFormats.Standard, NameFormats.Standard, NameFormats.Standard, NameFormats.Standard, NameFormats.Standard, NameFormats.Standard
-        };
-        private static readonly IDictionary<NameFormats, Func<string[]>> _formatMap = new Dictionary<NameFormats, Func<string[]>>
-        {
-            { NameFormats.Standard,     () => new [] { First(), Last() } },
-            { NameFormats.WithPrefix,   () => new [] { Prefix(), First(), Last() } },
-            { NameFormats.WithSuffix,   () => new [] { First(), Last(), Suffix() } }
-        };
-        #endregion
     }
 }

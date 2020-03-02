@@ -6,6 +6,25 @@ namespace Faker
 {
     public static class Address
     {
+        private static readonly IEnumerable<Func<string>> CityFormats = new List<Func<string>>
+        {
+            () => $"{CityPrefix()} {Name.First()}{CitySuffix()}",
+            () => $"{CityPrefix()} {Name.First()}",
+            () => $"{Name.First()}{CitySuffix()}",
+            () => $"{Name.Last()}{CitySuffix()}"
+        };
+
+        private static readonly IEnumerable<Func<string[]>> StreetFormats = new List<Func<string[]>>
+        {
+            () => new[] {Name.Last(), StreetSuffix()},
+            () => new[] {Name.First(), StreetSuffix()}
+        };
+
+        private static readonly IEnumerable<Func<string>> StreetAddressFormats = new List<Func<string>>
+        {
+            () => string.Format(Resources.Address.AddressFormat.Split(Config.Separator).Random().Trim(), StreetName())
+        };
+
         public static string Country()
         {
             return Resources.Address.Country.Split(Config.Separator).Random().Trim();
@@ -45,7 +64,7 @@ namespace Faker
         {
             return Resources.Address.UsStateAbbr.Split(Config.Separator).Random();
         }
-        
+
         public static string CityPrefix()
         {
             return Resources.Address.CityPrefix.Split(Config.Separator).Random();
@@ -58,7 +77,7 @@ namespace Faker
 
         public static string City()
         {
-            return _cityFormats.Random();
+            return CityFormats.Random();
         }
 
         public static string StreetSuffix()
@@ -68,12 +87,13 @@ namespace Faker
 
         public static string StreetName()
         {
-            return string.Join(Resources.Address.StreetNameSeparator, _streetFormats.Random());
+            var result = string.Join(Resources.Address.StreetNameSeparator, StreetFormats.Random());
+            return result;
         }
 
         public static string StreetAddress(bool includeSecondary = false)
         {
-            return _streetAddressFormats.Random().Numerify() + (includeSecondary ? " " + SecondaryAddress() : "");
+            return StreetAddressFormats.Random().Numerify() + (includeSecondary ? " " + SecondaryAddress() : "");
         }
 
         public static string SecondaryAddress()
@@ -95,26 +115,5 @@ namespace Faker
         {
             return Resources.Address.UkPostCode.Split(Config.Separator).Random().Trim().Numerify().Letterify();
         }
-
-        #region Format Mappings
-        private static readonly IEnumerable<Func<string>> _cityFormats = new List<Func<string>>
-        {
-            () => $"{CityPrefix()} {Name.First()}{CitySuffix()}",
-            () => $"{CityPrefix()} {Name.First()}",
-            () => $"{Name.First()}{CitySuffix()}",
-            () => $"{Name.Last()}{CitySuffix()}"
-        };
-
-        private static readonly IEnumerable<Func<string[]>> _streetFormats = new List<Func<string[]>>
-        {
-            () => new [] { Name.Last(), StreetSuffix() },
-            () => new [] { Name.First(), StreetSuffix() }
-        };
-
-        private static readonly IEnumerable<Func<string>> _streetAddressFormats = new List<Func<string>>
-        {
-            () => string.Format(Resources.Address.AddressFormat.Split(Config.Separator).Random().Trim(), StreetName())
-        };
-        #endregion
     }
 }

@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Faker.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Faker.Tests\AddressFixture.cs" Link="AddressFixture.cs" />
+    <Compile Include="..\Faker.Tests\CompanyFixture.cs" Link="CompanyFixture.cs" />
+    <Compile Include="..\Faker.Tests\CultureInfoFixture.cs" Link="CultureInfoFixture.cs" />
+    <Compile Include="..\Faker.Tests\Extensions\ArrayExtensionsFixture.cs" Link="Extensions\ArrayExtensionsFixture.cs" />
+    <Compile Include="..\Faker.Tests\Extensions\EnumerableExtensionsFixture.cs" Link="Extensions\EnumerableExtensionsFixture.cs" />
+    <Compile Include="..\Faker.Tests\Extensions\StringExtensionsFixture.cs" Link="Extensions\StringExtensionsFixture.cs" />
+    <Compile Include="..\Faker.Tests\InternetFixture.cs" Link="InternetFixture.cs" />
+    <Compile Include="..\Faker.Tests\LoremFixture.cs" Link="LoremFixture.cs" />
+    <Compile Include="..\Faker.Tests\NameFixture.cs" Link="NameFixture.cs" />
+    <Compile Include="..\Faker.Tests\PhoneFixture.cs" Link="PhoneFixture.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Extensions\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Faker.Net.Core.3.1\Faker.Net.Core.3.1.csproj" />
+  </ItemGroup>
+
+</Project>

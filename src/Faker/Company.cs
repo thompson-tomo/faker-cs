@@ -6,6 +6,17 @@ namespace Faker
 {
     public static class Company
     {
+        #region Format Mappings
+
+        private static readonly IEnumerable<Func<string>> NameFormats = new List<Func<string>>
+        {
+            () => $"{Faker.Name.Last()} {Suffix()}",
+            () => $"{Faker.Name.Last()}-{Faker.Name.Last()}",
+            () => $"{Faker.Name.Last()}, {Faker.Name.Last()} {Resources.Company.And} {Faker.Name.Last()}"
+        };
+
+        #endregion
+
         public static string Name()
         {
             return NameFormats.Random();
@@ -17,42 +28,25 @@ namespace Faker
         }
 
         /// <summary>
-        /// Generate a buzzword-laden catch phrase.
-        /// Wordlist from http://www.1728.com/buzzword.htm
+        ///     Generate a buzzword-laden catch phrase.
+        ///     Wordlist from http://www.1728.com/buzzword.htm
         /// </summary>
         public static string CatchPhrase()
         {
-            return string.Join(" ",
-                               new[]
-                               {
-                                   Resources.Company.Buzzwords1.Split(Config.Separator).Random(),
-                                   Resources.Company.Buzzwords2.Split(Config.Separator).Random(),
-                                   Resources.Company.Buzzwords3.Split(Config.Separator).Random()
-                               });
+            return string.Join(" ", Resources.Company.Buzzwords1.Split(Config.Separator).Random(),
+                Resources.Company.Buzzwords2.Split(Config.Separator).Random(),
+                Resources.Company.Buzzwords3.Split(Config.Separator).Random());
         }
 
         /// <summary>
-        /// When a straight answer won't do, BS to the rescue!
-        /// Wordlist from http://dack.com/web/bullshit.html
+        ///     When a straight answer won't do, BS to the rescue!
+        ///     Wordlist from http://dack.com/web/bullshit.html
         /// </summary>
         public static string BS()
         {
-            return string.Join(" ",
-                               new[]
-                               {
-                                   Resources.Company.BS1.Split(Config.Separator).Random(),
-                                   Resources.Company.BS2.Split(Config.Separator).Random(),
-                                   Resources.Company.BS3.Split(Config.Separator).Random()
-                               });
+            return string.Join(" ", Resources.Company.BS1.Split(Config.Separator).Random(),
+                Resources.Company.BS2.Split(Config.Separator).Random(),
+                Resources.Company.BS3.Split(Config.Separator).Random());
         }
-
-        #region Format Mappings
-        private static readonly IEnumerable<Func<string>> NameFormats = new List<Func<string>>
-        {
-            () => $"{Faker.Name.Last()} {Suffix()}",
-            () => $"{Faker.Name.Last()}-{Faker.Name.Last()}",
-            () => $"{Faker.Name.Last()}, {Faker.Name.Last()} {Resources.Company.And} {Faker.Name.Last()}",
-        };
-        #endregion
     }
 }

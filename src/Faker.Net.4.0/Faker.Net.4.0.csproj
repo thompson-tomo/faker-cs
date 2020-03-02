@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FFB599BB-8FCA-4A01-A159-4D764A33E755}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Faker</RootNamespace>
+    <AssemblyName>Faker.Net.4.0</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Faker\Address.cs">
+      <Link>Address.cs</Link>
+    </Compile>
+    <Compile Include="..\Faker\Boolean.cs">
+      <Link>Boolean.cs</Link>
+    </Compile>
+    <Compile Include="..\Faker\Company.cs">
+      <Link>Company.cs</Link>
+    </Compile>
+    <Compile Include="..\Faker\Config.cs">
+      <Link>Config.cs</Link>
+    </Compile>
+    <Compile Include="..\Faker\Enum.cs">
+      <Link>Enum.cs</Link>
+    </Compile>
+    <Compile Include="..\Faker\Extensions\ArrayExtensions.cs">
+      <Link>Extensions\ArrayExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Faker\Extensions\EnumerableExtensions.cs">
+      <Link>Extensions\EnumerableExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Faker\Extensions\StringExtensions.cs">
+      <Link>Extensions\StringExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Faker\Internet.cs">
+      <Link>Internet.cs</Link>
+    </Compile>
+    <Compile Include="..\Faker\Lorem.cs">
+      <Link>Lorem.cs</Link>
+    </Compile>
+    <Compile Include="..\Faker\Name.cs">
+      <Link>Name.cs</Link>
+    </Compile>
+    <Compile Include="..\Faker\Phone.cs">
+      <Link>Phone.cs</Link>
+    </Compile>
+    <Compile Include="..\Faker\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Faker\RandomNumber.cs">
+      <Link>RandomNumber.cs</Link>
+    </Compile>
+    <Compile Include="..\Faker\Resources\Address.Designer.cs">
+      <Link>Resources\Address.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\Faker\Resources\Company.Designer.cs">
+      <Link>Resources\Company.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\Faker\Resources\Internet.Designer.cs">
+      <Link>Resources\Internet.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\Faker\Resources\Lorem.Designer.cs">
+      <Link>Resources\Lorem.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\Faker\Resources\Name.Designer.cs">
+      <Link>Resources\Name.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\Faker\Resources\Phone.Designer.cs">
+      <Link>Resources\Phone.Designer.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="..\Faker\Resources\Address.de-DE.resx">
+      <Link>Resources\Address.de-DE.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Faker\Resources\Address.resx">
+      <Link>Resources\Address.resx</Link>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Faker\Resources\Company.de-DE.resx">
+      <Link>Resources\Company.de-DE.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Faker\Resources\Company.resx">
+      <Link>Resources\Company.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Faker\Resources\Internet.de-DE.resx">
+      <Link>Resources\Internet.de-DE.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Faker\Resources\Internet.resx">
+      <Link>Resources\Internet.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Faker\Resources\Lorem.de-DE.resx">
+      <Link>Resources\Lorem.de-DE.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Faker\Resources\Lorem.resx">
+      <Link>Resources\Lorem.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Faker\Resources\Name.de-DE.resx">
+      <Link>Resources\Name.de-DE.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Faker\Resources\Name.resx">
+      <Link>Resources\Name.resx</Link>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Faker\Resources\Phone.de-DE.resx">
+      <Link>Resources\Phone.de-DE.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Faker\Resources\Phone.resx">
+      <Link>Resources\Phone.resx</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
