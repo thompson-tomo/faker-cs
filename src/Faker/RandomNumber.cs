@@ -3,9 +3,6 @@ using System.Security.Cryptography;
 
 namespace Faker
 {
-    /// <summary>
-    ///     Provide access to random number generator.
-    /// </summary>
     public static class RandomNumber
     {
         private static readonly RandomNumberGenerator Rnd = RandomNumberGenerator.Create();

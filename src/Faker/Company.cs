@@ -6,16 +6,12 @@ namespace Faker
 {
     public static class Company
     {
-        #region Format Mappings
-
         private static readonly IEnumerable<Func<string>> NameFormats = new List<Func<string>>
         {
             () => $"{Faker.Name.Last()} {Suffix()}",
             () => $"{Faker.Name.Last()}-{Faker.Name.Last()}",
             () => $"{Faker.Name.Last()}, {Faker.Name.Last()} {Resources.Company.And} {Faker.Name.Last()}"
         };
-
-        #endregion
 
         public static string Name()
         {

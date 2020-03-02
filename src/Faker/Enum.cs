@@ -2,9 +2,6 @@
 
 namespace Faker
 {
-    /// <summary>
-    ///     Generates a random enum value
-    /// </summary>
     public static class Enum
     {
         public static T Random<T>()

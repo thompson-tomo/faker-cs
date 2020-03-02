@@ -10,6 +10,7 @@
     <Compile Include="..\Faker\Address.cs" Link="Address.cs" />
     <Compile Include="..\Faker\Company.cs" Link="Company.cs" />
     <Compile Include="..\Faker\Config.cs" Link="Config.cs" />
+    <Compile Include="..\Faker\Currency.cs" Link="Currency.cs" />
     <Compile Include="..\Faker\Extensions\ArrayExtensions.cs" Link="Extensions\ArrayExtensions.cs" />
     <Compile Include="..\Faker\Extensions\EnumerableExtensions.cs" Link="Extensions\EnumerableExtensions.cs" />
     <Compile Include="..\Faker\Extensions\StringExtensions.cs" Link="Extensions\StringExtensions.cs" />
@@ -21,6 +22,7 @@
     <Compile Include="..\Faker\RandomNumber.cs" Link="RandomNumber.cs" />
     <Compile Include="..\Faker\Resources\Address.Designer.cs" Link="Resources\Address.Designer.cs" />
     <Compile Include="..\Faker\Resources\Company.Designer.cs" Link="Resources\Company.Designer.cs" />
+    <Compile Include="..\Faker\Resources\Currency.Designer.cs" Link="Resources\Currency.Designer.cs" />
     <Compile Include="..\Faker\Resources\Internet.Designer.cs" Link="Resources\Internet.Designer.cs" />
     <Compile Include="..\Faker\Resources\Lorem.Designer.cs" Link="Resources\Lorem.Designer.cs" />
     <Compile Include="..\Faker\Resources\Name.Designer.cs" Link="Resources\Name.Designer.cs" />
@@ -47,6 +49,8 @@
     <EmbeddedResource Include="..\Faker\Resources\Company.resx" Link="Resources\Company.resx">
       <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="..\Faker\Resources\Currency.de-DE.resx" Link="Resources\Currency.de-DE.resx" />
+    <EmbeddedResource Include="..\Faker\Resources\Currency.resx" Link="Resources\Currency.resx" />
     <EmbeddedResource Include="..\Faker\Resources\Internet.de-DE.resx" Link="Resources\Internet.de-DE.resx">
       <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>

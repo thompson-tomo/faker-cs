@@ -1,8 +1,5 @@
 ﻿namespace Faker
 {
-    /// <summary>
-    ///     Generates a random boolean value
-    /// </summary>
     public static class Boolean
     {
         public static bool Random()

@@ -9,6 +9,7 @@
     <Compile Include="..\Faker.Tests\AddressFixture.cs" Link="AddressFixture.cs" />
     <Compile Include="..\Faker.Tests\CompanyFixture.cs" Link="CompanyFixture.cs" />
     <Compile Include="..\Faker.Tests\CultureInfoFixture.cs" Link="CultureInfoFixture.cs" />
+    <Compile Include="..\Faker.Tests\CurrencyFixture.cs" Link="CurrencyFixture.cs" />
     <Compile Include="..\Faker.Tests\Extensions\ArrayExtensionsFixture.cs" Link="Extensions\ArrayExtensionsFixture.cs" />
     <Compile Include="..\Faker.Tests\Extensions\EnumerableExtensionsFixture.cs" Link="Extensions\EnumerableExtensionsFixture.cs" />
     <Compile Include="..\Faker.Tests\Extensions\StringExtensionsFixture.cs" Link="Extensions\StringExtensionsFixture.cs" />

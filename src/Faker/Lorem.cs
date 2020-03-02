@@ -7,11 +7,6 @@ namespace Faker
 {
     public static class Lorem
     {
-        /// <summary>
-        ///     Get a random collection of words.
-        /// </summary>
-        /// <param name="count">Number of words required</param>
-        /// <returns></returns>
         public static IEnumerable<string> Words(int count)
         {
             if (count <= 0) throw new ArgumentException(@"Count must be greater than zero", nameof(count));
@@ -19,20 +14,11 @@ namespace Faker
             return count.Times(x => Resources.Lorem.Words.Split(Config.Separator).Random());
         }
 
-        /// <summary>
-        ///     Get the first word of the random word collection. Useful for unit tests.
-        /// </summary>
-        /// <returns></returns>
         public static string GetFirstWord()
         {
             return Resources.Lorem.Words.Split(Config.Separator).First();
         }
 
-        /// <summary>
-        ///     Generates a capitalised sentence of random words.
-        /// </summary>
-        /// <param name="minWordCount">Minimum number of words required</param>
-        /// <returns></returns>
         public static string Sentence(int minWordCount)
         {
             if (minWordCount <= 0)

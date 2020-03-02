@@ -50,6 +50,9 @@
     <Compile Include="..\Faker.Tests\CultureInfoFixture.cs">
       <Link>CultureInfoFixture.cs</Link>
     </Compile>
+    <Compile Include="..\Faker.Tests\CurrencyFixture.cs">
+      <Link>CurrencyFixture.cs</Link>
+    </Compile>
     <Compile Include="..\Faker.Tests\Extensions\ArrayExtensionsFixture.cs">
       <Link>Extensions\ArrayExtensionsFixture.cs</Link>
     </Compile>
