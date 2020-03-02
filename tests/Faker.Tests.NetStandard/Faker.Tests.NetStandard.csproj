@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Faker.Tests\AddressFixture.cs" Link="AddressFixture.cs" />
+    <Compile Include="..\Faker.Tests\CompanyFixture.cs" Link="CompanyFixture.cs" />
+    <Compile Include="..\Faker.Tests\CultureInfoFixture.cs" Link="CultureInfoFixture.cs" />
+    <Compile Include="..\Faker.Tests\InternetFixture.cs" Link="InternetFixture.cs" />
+    <Compile Include="..\Faker.Tests\LoremFixture.cs" Link="LoremFixture.cs" />
+    <Compile Include="..\Faker.Tests\NameFixture.cs" Link="NameFixture.cs" />
+    <Compile Include="..\Faker.Tests\PhoneFixture.cs" Link="PhoneFixture.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="nunit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Faker.netstandard20\Faker.netstandard20.csproj" />
+  </ItemGroup>
+
+</Project>
