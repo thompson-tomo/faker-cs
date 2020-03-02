@@ -9,7 +9,7 @@ C# port of the Ruby Faker gem (http://faker.rubyforge.org/) and is used to easil
 	countries,
 	currencies,
 	enums,
-	finance (isin),
+	finance (isin, ticker, coupon, maturity, bond name),
 	internet (email, domain names, user names),
 	names,
 	lorem ipsum,
