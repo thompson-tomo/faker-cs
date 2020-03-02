@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Faker.Net</id>
-    <version>{version}</version>
+    <version>1.0</version>
     <authors>Ben Smith,Ollie Riches,Robin Michael</authors>
     <owners>Ben Smith,Ollie Riches,Robin Michael</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -18,23 +18,23 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="src\net40\de-DE\Faker.Net.4.0.resources.dll" target="lib\net40\de-DE\Faker.Net.4.0.resources.dll" />
-    <file src="src\net40\Faker.Net.4.0.dll" target="lib\net40\Faker.Net.4.0.dll" />
-    <file src="src\net452\de-DE\Faker.Net.4.5.resources.dll" target="lib\net452\de-DE\Faker.Net.4.5.resources.dll" />
-    <file src="src\net452\Faker.Net.4.5.dll" target="lib\net452\Faker.Net.4.5.dll" />
-    <file src="src\net462\de-DE\Faker.Net.4.6.resources.dll" target="lib\net462\de-DE\Faker.Net.4.6.resources.dll" />
-    <file src="src\net462\Faker.Net.4.6.dll" target="lib\net462\Faker.Net.4.6.dll" />
-    <file src="src\net472\de-DE\Faker.Net.4.7.resources.dll" target="lib\net472\de-DE\Faker.Net.4.7.resources.dll" />
-    <file src="src\net472\Faker.Net.4.7.dll" target="lib\net472\Faker.Net.4.7.dll" />
-    <file src="src\net48\de-DE\Faker.Net.4.8.resources.dll" target="lib\net48\de-DE\Faker.Net.4.8.resources.dll" />
-    <file src="src\net48\Faker.Net.4.8.dll" target="lib\net48\Faker.Net.4.8.dll" />
-    <file src="src\netcoreapp3.0\de-DE\Faker.Net.Core.3.0.resources.dll" target="lib\netcoreapp3.0\de-DE\Faker.Net.Core.3.0.resources.dll" />
-    <file src="src\netcoreapp3.0\Faker.Net.Core.3.0.dll" target="lib\netcoreapp3.0\Faker.Net.Core.3.0.dll" />
-    <file src="src\netcoreapp3.1\de-DE\Faker.Net.Core.3.1.resources.dll" target="lib\netcoreapp3.1\de-DE\Faker.Net.Core.3.1.resources.dll" />
-    <file src="src\netcoreapp3.1\Faker.Net.Core.3.1.dll" target="lib\netcoreapp3.1\Faker.Net.Core.3.1.dll" />
-    <file src="src\netstandard2.0\de-DE\Faker.Net.Standard.2.0.resources.dll" target="lib\netstandard2.0\de-DE\Faker.Net.Standard.2.0.resources.dll" />
-    <file src="src\netstandard2.0\Faker.Net.Standard.2.0.dll" target="lib\netstandard2.0\Faker.Net.Standard.2.0.dll" />
-    <file src="src\netstandard2.1\de-DE\Faker.Net.Standard.2.1.resources.dll" target="lib\netstandard2.1\de-DE\Faker.Net.Standard.2.1.resources.dll" />
-    <file src="src\netstandard2.1\Faker.Net.Standard.2.1.dll" target="lib\netstandard2.1\Faker.Net.Standard.2.1.dll" />
+    <file src="src\Faker.Net.4.0\bin\Release\de-DE\Faker.Net.4.0.resources.dll" target="lib\net40\de-DE\Faker.Net.4.0.resources.dll" />
+    <file src="src\Faker.Net.4.0\bin\Release\Faker.Net.4.0.dll" target="lib\net40\Faker.Net.4.0.dll" />
+    <file src="src\Faker.Net.4.5\bin\Release\de-DE\Faker.Net.4.5.resources.dll" target="lib\net452\de-DE\Faker.Net.4.5.resources.dll" />
+    <file src="src\Faker.Net.4.5\bin\Release\Faker.Net.4.5.dll" target="lib\net452\Faker.Net.4.5.dll" />
+    <file src="src\Faker.Net.4.6\bin\Release\de-DE\Faker.Net.4.6.resources.dll" target="lib\net462\de-DE\Faker.Net.4.6.resources.dll" />
+    <file src="src\Faker.Net.4.6\bin\Release\Faker.Net.4.6.dll" target="lib\net462\Faker.Net.4.6.dll" />
+    <file src="src\Faker.Net.4.7\bin\Release\de-DE\Faker.Net.4.7.resources.dll" target="lib\net472\de-DE\Faker.Net.4.7.resources.dll" />
+    <file src="src\Faker.Net.4.7\bin\Release\Faker.Net.4.7.dll" target="lib\net472\Faker.Net.4.7.dll" />
+    <file src="src\Faker.Net.4.8\bin\Release\de-DE\Faker.Net.4.8.resources.dll" target="lib\net48\de-DE\Faker.Net.4.8.resources.dll" />
+    <file src="src\Faker.Net.4.8\bin\Release\Faker.Net.4.8.dll" target="lib\net48\Faker.Net.4.8.dll" />
+    <file src="src\Faker.Net.Core.3.0\bin\Release\netcoreapp3.0\de-DE\Faker.Net.Core.3.0.resources.dll" target="lib\netcoreapp3.0\de-DE\Faker.Net.Core.3.0.resources.dll" />
+    <file src="src\Faker.Net.Core.3.0\bin\Release\netcoreapp3.0\Faker.Net.Core.3.0.dll" target="lib\netcoreapp3.0\Faker.Net.Core.3.0.dll" />
+    <file src="src\Faker.Net.Core.3.1\bin\Release\netcoreapp3.1\de-DE\Faker.Net.Core.3.1.resources.dll" target="lib\netcoreapp3.1\de-DE\Faker.Net.Core.3.1.resources.dll" />
+    <file src="src\Faker.Net.Core.3.1\bin\Release\netcoreapp3.1\Faker.Net.Core.3.1.dll" target="lib\netcoreapp3.1\Faker.Net.Core.3.1.dll" />
+    <file src="src\Faker.Net.Standard.2.0\bin\Release\netstandard2.0\de-DE\Faker.Net.Standard.2.0.resources.dll" target="lib\netstandard2.0\de-DE\Faker.Net.Standard.2.0.resources.dll" />
+    <file src="src\Faker.Net.Standard.2.0\bin\Release\netstandard2.0\Faker.Net.Standard.2.0.dll" target="lib\netstandard2.0\Faker.Net.Standard.2.0.dll" />
+    <file src="src\Faker.Net.Standard.2.1\bin\Release\netstandard2.1\de-DE\Faker.Net.Standard.2.1.resources.dll" target="lib\netstandard2.1\de-DE\Faker.Net.Standard.2.1.resources.dll" />
+    <file src="src\Faker.Net.Standard.2.1\bin\Release\netstandard2.1\Faker.Net.Standard.2.1.dll" target="lib\netstandard2.1\Faker.Net.Standard.2.1.dll" />
   </files>
 </package>
