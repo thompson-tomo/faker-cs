@@ -1,6 +1,6 @@
-# Simple.Wpf.Exceptions
+# Faker
 
-[![Build status](https://ci.appveyor.com/api/projects/status/72staf3ivfet3699?svg=true)](https://ci.appveyor.com/project/oriches/simple-wpf-exceptions)
+[![Build status](https://ci.appveyor.com/api/projects/status/72staf3ivfet3699?svg=true)](https://ci.appveyor.com/project/oriches/faker-cs)
 
 As with all my 'important' stuff it builds using the amazing [AppVeyor](https://ci.appveyor.com/project/oriches/faker-cs).
 
