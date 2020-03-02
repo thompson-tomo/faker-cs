@@ -50,6 +50,9 @@
     <Compile Include="..\Faker\Config.cs">
       <Link>Config.cs</Link>
     </Compile>
+    <Compile Include="..\Faker\Country.cs">
+      <Link>Country.cs</Link>
+    </Compile>
     <Compile Include="..\Faker\Currency.cs">
       <Link>Currency.cs</Link>
     </Compile>
@@ -64,6 +67,9 @@
     </Compile>
     <Compile Include="..\Faker\Extensions\StringExtensions.cs">
       <Link>Extensions\StringExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Faker\Finance.cs">
+      <Link>Finance.cs</Link>
     </Compile>
     <Compile Include="..\Faker\Internet.cs">
       <Link>Internet.cs</Link>
@@ -88,6 +94,9 @@
     </Compile>
     <Compile Include="..\Faker\Resources\Company.Designer.cs">
       <Link>Resources\Company.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\Faker\Resources\Country.Designer.cs">
+      <Link>Resources\Country.Designer.cs</Link>
     </Compile>
     <Compile Include="..\Faker\Resources\Currency.Designer.cs">
       <Link>Resources\Currency.Designer.cs</Link>
@@ -118,6 +127,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="..\Faker\Resources\Company.resx">
       <Link>Resources\Company.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Faker\Resources\Country.de-DE.resx">
+      <Link>Resources\Country.de-DE.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Faker\Resources\Country.resx">
+      <Link>Resources\Country.resx</Link>
     </EmbeddedResource>
     <EmbeddedResource Include="..\Faker\Resources\Currency.de-DE.resx">
       <Link>Resources\Currency.de-DE.resx</Link>

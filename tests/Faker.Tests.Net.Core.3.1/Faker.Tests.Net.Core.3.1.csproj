@@ -8,11 +8,13 @@
   <ItemGroup>
     <Compile Include="..\Faker.Tests\AddressFixture.cs" Link="AddressFixture.cs" />
     <Compile Include="..\Faker.Tests\CompanyFixture.cs" Link="CompanyFixture.cs" />
+    <Compile Include="..\Faker.Tests\CountryFixture.cs" Link="CountryFixture.cs" />
     <Compile Include="..\Faker.Tests\CultureInfoFixture.cs" Link="CultureInfoFixture.cs" />
     <Compile Include="..\Faker.Tests\CurrencyFixture.cs" Link="CurrencyFixture.cs" />
     <Compile Include="..\Faker.Tests\Extensions\ArrayExtensionsFixture.cs" Link="Extensions\ArrayExtensionsFixture.cs" />
     <Compile Include="..\Faker.Tests\Extensions\EnumerableExtensionsFixture.cs" Link="Extensions\EnumerableExtensionsFixture.cs" />
     <Compile Include="..\Faker.Tests\Extensions\StringExtensionsFixture.cs" Link="Extensions\StringExtensionsFixture.cs" />
+    <Compile Include="..\Faker.Tests\FinanceFixture.cs" Link="FinanceFixture.cs" />
     <Compile Include="..\Faker.Tests\InternetFixture.cs" Link="InternetFixture.cs" />
     <Compile Include="..\Faker.Tests\LoremFixture.cs" Link="LoremFixture.cs" />
     <Compile Include="..\Faker.Tests\NameFixture.cs" Link="NameFixture.cs" />

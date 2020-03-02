@@ -47,6 +47,9 @@
     <Compile Include="..\Faker.Tests\CompanyFixture.cs">
       <Link>CompanyFixture.cs</Link>
     </Compile>
+    <Compile Include="..\Faker.Tests\CountryFixture.cs">
+      <Link>CountryFixture.cs</Link>
+    </Compile>
     <Compile Include="..\Faker.Tests\CultureInfoFixture.cs">
       <Link>CultureInfoFixture.cs</Link>
     </Compile>
@@ -61,6 +64,9 @@
     </Compile>
     <Compile Include="..\Faker.Tests\Extensions\StringExtensionsFixture.cs">
       <Link>Extensions\StringExtensionsFixture.cs</Link>
+    </Compile>
+    <Compile Include="..\Faker.Tests\FinanceFixture.cs">
+      <Link>FinanceFixture.cs</Link>
     </Compile>
     <Compile Include="..\Faker.Tests\InternetFixture.cs">
       <Link>InternetFixture.cs</Link>
