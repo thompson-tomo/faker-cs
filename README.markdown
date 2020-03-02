@@ -1,6 +1,8 @@
 Faker
 =====
 
+[![Build status](https://ci.appveyor.com/api/github/webhook?id=wy4ph4fajqcnbvu8?svg=true)](https://ci.appveyor.com/project/oriches/faker-cs)
+
 C# port of the Ruby Faker gem (http://faker.rubyforge.org/) and is used to easily generate fake data:
 
 	addresses (UK, US),
