@@ -2,7 +2,17 @@ Faker
 =====
 
 C# port of the Ruby Faker gem (http://faker.rubyforge.org/) and is used to easily generate fake data: 
-addresses, boolean, config, compnay, countries, currencies, enums, finance (isin), internet, names, lorem ipsum, phone numbers, etc.
+addresses (UK, US),
+boolean,
+companies,
+countries,
+currencies,
+enums,
+finance (isin),
+internet (email, domain names, user names),
+names,
+lorem ipsum,
+phone numbers
 
 Available as a NuGet package (https://nuget.org/packages/Faker.Net).
 
