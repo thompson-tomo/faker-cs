@@ -32,6 +32,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Faker.Tests.Net.Core.3.1", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Faker.Tests.Net.4.8", "tests\Faker.Tests.Net.4.8\Faker.Tests.Net.4.8.csproj", "{829BDFF1-A65E-456B-B55E-1D1B7043D939}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuGet", "nuGet", "{513FC2C7-5B17-43BC-BAFD-4FC820800E33}"
+	ProjectSection(SolutionItems) = preProject
+		Faker.Net.nuspec = Faker.Net.nuspec
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
