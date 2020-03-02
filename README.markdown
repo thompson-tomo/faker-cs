@@ -27,7 +27,10 @@ Supported versions:
 	.NET framework 4.6,
 	.NET framework 4.7,
 	.NET framework 4.8,
-	.NET Standard 2.1
+	.NET Standard 2.0,
+	.NET Standard 2.1,
+	.NET Core 3.0,
+	.NET Core 3.1
 
 No longer supported in nuGet package (1.1 going forward), code still exists in repo.
 
