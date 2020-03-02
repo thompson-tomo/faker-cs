@@ -1,5 +1,6 @@
-Faker
-=====
+# Faker
+
+[![Build status](https://ci.appveyor.com/api/projects/status/uy628dn0tfl0triy?svg=true)](https://ci.appveyor.com/project/oriches/faker-cs)
 
 C# port of the Ruby Faker gem (http://faker.rubyforge.org/) and is used to easily generate fake data:
 
@@ -9,7 +10,7 @@ C# port of the Ruby Faker gem (http://faker.rubyforge.org/) and is used to easil
 	countries,
 	currencies,
 	enums,
-	finance (isin),
+	finance (isin, ticker, coupon, maturity, bond name),
 	internet (email, domain names, user names),
 	names,
 	lorem ipsum,
