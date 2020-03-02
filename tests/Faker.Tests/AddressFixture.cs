@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Globalization;
 using System.Text.RegularExpressions;
 using System.Threading;
@@ -35,6 +36,7 @@ namespace Faker.Tests
         {
             var address = Address.StreetAddress();
             Console.WriteLine($@"Address=[{address}]");
+            Debug.WriteLine($@"Address=[{address}]");
 
             Assert.IsTrue(Regex.IsMatch(address, "^[0-9]{3,5} [A-Z][a-z]+ [A-Z][a-z]+$"));
         }
@@ -44,9 +46,9 @@ namespace Faker.Tests
         {
             var address = Address.StreetAddress(true);
             Console.WriteLine($@"Address=[{address}]");
+            Debug.WriteLine($@"Address=[{address}]");
 
             Assert.IsTrue(Regex.IsMatch(address, @"^[0-9]{3,5} [A-Z][a-z]+ [A-Z][a-z]+ [A-Z][a-z]+\.? [0-9]{3}$"));
         }
-
     }
 }
