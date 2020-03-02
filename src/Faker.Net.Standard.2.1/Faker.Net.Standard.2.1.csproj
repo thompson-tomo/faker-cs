@@ -4,6 +4,7 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <RootNamespace>Faker</RootNamespace>
     <Version>1.2.0</Version>
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <ItemGroup>

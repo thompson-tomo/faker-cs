@@ -4,6 +4,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Faker</RootNamespace>
     <Version>1.2.0</Version>
+    <UserSecretsId>777da109-e99f-4a32-97d5-b56255aec2e4</UserSecretsId>
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <ItemGroup>

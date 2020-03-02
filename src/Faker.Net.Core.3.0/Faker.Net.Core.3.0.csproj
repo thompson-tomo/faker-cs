@@ -9,6 +9,7 @@
     <Product />
     <Version>1.2</Version>
     <PackageProjectUrl>https://github.com/oriches/faker-cs</PackageProjectUrl>
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <ItemGroup>
