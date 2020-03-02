@@ -32,7 +32,7 @@ Supported versions:
 	.NET Core 3.0,
 	.NET Core 3.1
 
-No longer supported in nuGet package (1.1 going forward), code still exists in repo.
+No longer supported in nuGet package (1.1 going forward):
 
 	.NET framework 3.5 SP1,
 	Silverlight 3.0,
