@@ -10,17 +10,28 @@ Get the code via git:
 
     git clone git://github.com/slashdotdash/faker-cs.git
 
+Example code 
+```csharp
+var name = Faker.Name.FullName(); // Tod Yundt
+var firstName = Faker.Name.First(); // Orlando
+var lastName = Faker.Name.Last(); // Brekke
+var address = Faker.Address.StreetAddress(); // 713 Pfeffer Bridge
+var city = Faker.Address.City(); // Reynaton
+var number = Faker.RandomNumber.Next(100); // 30
+```
+
 Supported versions:
 
-	.NET framework 3.5 SP1,
 	.NET framework 4.0,
 	.NET framework 4.5,
 	.NET framework 4.6,
 	.NET framework 4.7,
-	.NET Standard 2.0
+	.NET framework 4.8,
+	.NET Standard 2.1
 
 No longer supported in nuGet package (1.1 going forward), code still exists in repo.
 
+	.NET framework 3.5 SP1,
 	Silverlight 3.0,
 	Silverlight 4.0,
 	Silverlight 5.0,

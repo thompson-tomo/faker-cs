@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Faker.NET47</RootNamespace>
     <AssemblyName>Faker.NET47</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -80,73 +80,62 @@
     <Compile Include="..\Faker\RandomNumber.cs">
       <Link>RandomNumber.cs</Link>
     </Compile>
-    <Compile Include="Resources\Address.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Address.resx</DependentUpon>
+    <Compile Include="..\Faker\Resources\Address.Designer.cs">
+      <Link>Resources\Address.Designer.cs</Link>
     </Compile>
-    <Compile Include="Resources\Company.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Company.resx</DependentUpon>
+    <Compile Include="..\Faker\Resources\Company.Designer.cs">
+      <Link>Resources\Company.Designer.cs</Link>
     </Compile>
-    <Compile Include="Resources\Internet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Internet.resx</DependentUpon>
+    <Compile Include="..\Faker\Resources\Internet.Designer.cs">
+      <Link>Resources\Internet.Designer.cs</Link>
     </Compile>
-    <Compile Include="Resources\Lorem.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Lorem.resx</DependentUpon>
+    <Compile Include="..\Faker\Resources\Lorem.Designer.cs">
+      <Link>Resources\Lorem.Designer.cs</Link>
     </Compile>
-    <Compile Include="Resources\Name.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Name.resx</DependentUpon>
+    <Compile Include="..\Faker\Resources\Name.Designer.cs">
+      <Link>Resources\Name.Designer.cs</Link>
     </Compile>
-    <Compile Include="Resources\Phone.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Phone.resx</DependentUpon>
+    <Compile Include="..\Faker\Resources\Phone.Designer.cs">
+      <Link>Resources\Phone.Designer.cs</Link>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Address.de-DE.resx" />
-    <EmbeddedResource Include="Resources\Address.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Address.Designer.cs</LastGenOutput>
-      <CustomToolNamespace>Faker.Resources</CustomToolNamespace>
+    <EmbeddedResource Include="..\Faker\Resources\Address.de-DE.resx">
+      <Link>Resources\Address.de-DE.resx</Link>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Company.de-DE.resx" />
-    <EmbeddedResource Include="Resources\Company.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Company.Designer.cs</LastGenOutput>
-      <CustomToolNamespace>Faker.Resources</CustomToolNamespace>
+    <EmbeddedResource Include="..\Faker\Resources\Address.resx">
+      <Link>Resources\Address.resx</Link>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Internet.de-DE.resx" />
-    <EmbeddedResource Include="Resources\Internet.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Internet.Designer.cs</LastGenOutput>
-      <CustomToolNamespace>Faker.Resources</CustomToolNamespace>
+    <EmbeddedResource Include="..\Faker\Resources\Company.de-DE.resx">
+      <Link>Resources\Company.de-DE.resx</Link>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Lorem.de-DE.resx" />
-    <EmbeddedResource Include="Resources\Lorem.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Lorem.Designer.cs</LastGenOutput>
-      <CustomToolNamespace>Faker.Resources</CustomToolNamespace>
+    <EmbeddedResource Include="..\Faker\Resources\Company.resx">
+      <Link>Resources\Company.resx</Link>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Name.de-DE.resx" />
-    <EmbeddedResource Include="Resources\Name.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Name.Designer.cs</LastGenOutput>
-      <CustomToolNamespace>Faker.Resources</CustomToolNamespace>
+    <EmbeddedResource Include="..\Faker\Resources\Internet.de-DE.resx">
+      <Link>Resources\Internet.de-DE.resx</Link>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Phone.de-DE.resx" />
-    <EmbeddedResource Include="Resources\Phone.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Phone.Designer.cs</LastGenOutput>
-      <CustomToolNamespace>Faker.Resources</CustomToolNamespace>
+    <EmbeddedResource Include="..\Faker\Resources\Internet.resx">
+      <Link>Resources\Internet.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Faker\Resources\Lorem.de-DE.resx">
+      <Link>Resources\Lorem.de-DE.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Faker\Resources\Lorem.resx">
+      <Link>Resources\Lorem.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Faker\Resources\Name.de-DE.resx">
+      <Link>Resources\Name.de-DE.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Faker\Resources\Name.resx">
+      <Link>Resources\Name.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Faker\Resources\Phone.de-DE.resx">
+      <Link>Resources\Phone.de-DE.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Faker\Resources\Phone.resx">
+      <Link>Resources\Phone.resx</Link>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

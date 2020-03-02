@@ -54,7 +54,10 @@ namespace Faker.Tests
         #region Helper
         private void SetCultureToDefault()
         {
-            SetCurrentCulture(DefaultCultureInfoString);
+            var theDefault = new CultureInfo(DefaultCultureInfoString);
+            Thread.CurrentThread.CurrentCulture = theDefault;
+            Thread.CurrentThread.CurrentUICulture = theDefault;
+
         }
 
         private void SetCurrentCulture(string cultureInfoString)

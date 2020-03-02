@@ -22,7 +22,7 @@ namespace Faker
         /// </summary>
         public static string CatchPhrase()
         {
-            return String.Join(" ",
+            return string.Join(" ",
                                new[]
                                {
                                    Resources.Company.Buzzwords1.Split(Config.Separator).Random(),
@@ -37,7 +37,7 @@ namespace Faker
         /// </summary>
         public static string BS()
         {
-            return String.Join(" ",
+            return string.Join(" ",
                                new[]
                                {
                                    Resources.Company.BS1.Split(Config.Separator).Random(),
@@ -49,9 +49,9 @@ namespace Faker
         #region Format Mappings
         private static readonly IEnumerable<Func<string>> NameFormats = new List<Func<string>>
         {
-            () => string.Format("{0} {1}", Faker.Name.Last(), Suffix()),
-            () => string.Format("{0}-{1}", Faker.Name.Last(), Faker.Name.Last()),
-            () => string.Format("{0}, {1} {2} {3}", Faker.Name.Last(), Faker.Name.Last(), Resources.Company.And, Faker.Name.Last()),
+            () => $"{Faker.Name.Last()} {Suffix()}",
+            () => $"{Faker.Name.Last()}-{Faker.Name.Last()}",
+            () => $"{Faker.Name.Last()}, {Faker.Name.Last()} {Resources.Company.And} {Faker.Name.Last()}",
         };
         #endregion
     }

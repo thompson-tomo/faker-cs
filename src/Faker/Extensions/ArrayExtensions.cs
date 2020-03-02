@@ -11,7 +11,7 @@ namespace Faker.Extensions
         /// </summary>
         public static string Random(this string[] list)
         {
-            if (list.Count() == 0) throw new InvalidOperationException("Array must contain at least one item");
+            if (list.Length == 0) throw new InvalidOperationException("Array must contain at least one item");
 
             return list[RandomNumber.Next(0, list.Length)];
         }
@@ -21,7 +21,7 @@ namespace Faker.Extensions
         /// </summary>
         public static string Random(this IEnumerable<Func<string>> list)
         {
-            if (list.Count() == 0) throw new InvalidOperationException("Enumerable list must contain at least one item");
+            if (!list.Any()) throw new InvalidOperationException("Enumerable list must contain at least one item");
 
             return list.ElementAt(RandomNumber.Next(0, list.Count())).Invoke();
         }
@@ -31,7 +31,7 @@ namespace Faker.Extensions
         /// </summary>
         public static string[] Random(this IEnumerable<Func<string[]>> list)
         {
-            if (list.Count() == 0) throw new InvalidOperationException("Enumerable list must contain at least one item");
+            if (!list.Any()) throw new InvalidOperationException("Enumerable list must contain at least one item");
 
             return list.ElementAt(RandomNumber.Next(0, list.Count())).Invoke();
         }
