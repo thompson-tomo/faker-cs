@@ -61,7 +61,7 @@ namespace Faker
             groups.AddRange(Enumerable.Range(11, 99).Where(z => z % 2 == 1));
             var group = groups.ElementAt(RandomNumber.Next(0, groups.Count));
             var serial = RandomNumber.Next(1, 10000);
-            var ssn = $"{area:###}-{group:##}-{serial:####}";
+            var ssn = $"{area:000}-{group:00}-{serial:0000}";
             return !dashFormat ? ssn.Replace("-", "") : ssn;
         }
 
