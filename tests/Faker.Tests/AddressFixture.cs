@@ -20,6 +20,8 @@ namespace Faker.Tests
         public void Should_Get_MilitaryStateAbbr()
         {
             var address = Address.UsMilitaryStateAbbr();
+            Console.WriteLine($@"Address=[{address}]");
+
             Assert.IsTrue(address.StartsWith("A", StringComparison.CurrentCultureIgnoreCase));
         }
 
@@ -27,6 +29,8 @@ namespace Faker.Tests
         public void Should_Get_MilitaryState()
         {
             var address = Address.UsMilitaryState();
+            Console.WriteLine($@"Address=[{address}]");
+
             Assert.IsTrue(address.StartsWith("Armed", StringComparison.CurrentCultureIgnoreCase));
         }
 

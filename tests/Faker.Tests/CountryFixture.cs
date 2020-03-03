@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 
 namespace Faker.Tests
 {
@@ -9,6 +10,7 @@ namespace Faker.Tests
         public void should_return_two_letter_country_code()
         {
             var currency = Country.TwoLetterCode();
+            Console.WriteLine($@"TwoLetterCode=[{currency}]");
 
             Assert.That(currency.Length, Is.EqualTo(2));
         }
@@ -16,9 +18,10 @@ namespace Faker.Tests
         [Test]
         public void should_return_country_name()
         {
-            var currency = Country.Name();
+            var name = Country.Name();
+            Console.WriteLine($@"Name=[{name}]");
 
-            Assert.That(currency, Is.Not.Empty);
+            Assert.That(name, Is.Not.Empty);
         }
     }
 }
