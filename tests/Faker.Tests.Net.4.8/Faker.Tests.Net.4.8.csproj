@@ -68,6 +68,9 @@
     <Compile Include="..\Faker.Tests\FinanceFixture.cs">
       <Link>FinanceFixture.cs</Link>
     </Compile>
+    <Compile Include="..\Faker.Tests\IdentificationFixture.cs">
+      <Link>IdentificationFixture.cs</Link>
+    </Compile>
     <Compile Include="..\Faker.Tests\InternetFixture.cs">
       <Link>InternetFixture.cs</Link>
     </Compile>
