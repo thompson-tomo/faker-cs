@@ -40,7 +40,7 @@ namespace Faker.Tests
             var address = Address.StreetAddress();
             Console.WriteLine($@"StreetAddress=[{address}]");
 
-            Assert.IsTrue(Regex.IsMatch(address, "^[0-9]{3,5} [A-Z][a-z]+ [A-Z][a-z]+$"));
+            Assert.IsTrue(Regex.IsMatch(address, "^[0-9]{3,5} [A-Z\'a-z]+ [A-Z][a-z]+$"));
         }
 
         [Test]
@@ -49,7 +49,7 @@ namespace Faker.Tests
             var address = Address.StreetAddress(true);
             Console.WriteLine($@"StreetAddress=[{address}]");
 
-            Assert.IsTrue(Regex.IsMatch(address, @"^[0-9]{3,5} [A-Z][a-z]+ [A-Z][a-z]+ [A-Z][a-z]+\.? [0-9]{3}$"));
+            Assert.IsTrue(Regex.IsMatch(address, @"^[0-9]{3,5} [A-Z\'a-z]+ [A-Z\'a-z]+ [A-Z\'a-z]+\.? [0-9]{3}$"));
         }
     }
 }
