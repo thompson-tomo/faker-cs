@@ -30,6 +30,9 @@ var lastName = Faker.Name.Last(); // Brekke
 var address = Faker.Address.StreetAddress(); // 713 Pfeffer Bridge
 var city = Faker.Address.City(); // Reynaton
 var number = Faker.RandomNumber.Next(100); // 30
+var ssn = Faker.Identification.SocialSecurityNumber(); // 249-17-9666
+var mbi = Faker.Identification.MedicareBeneficiaryIdentifier(); // 8NK0Q74KT53
+var nin = Faker.Identification.UKNationalInsuranceNumber(); // YA171053Y
 ```
 
 Supported versions:
