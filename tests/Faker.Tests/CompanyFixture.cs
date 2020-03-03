@@ -30,7 +30,7 @@ namespace Faker.Tests
             var catchPhrase = Company.CatchPhrase();
             Console.WriteLine($@"CatchPhrase=[{catchPhrase}]");
 
-            Assert.IsTrue(Regex.IsMatch(catchPhrase, @"[\w\-]+ [\w\-]+ [\w\-]+"));
+            Assert.IsTrue(Regex.IsMatch(catchPhrase, @"[\w\-\/]+ [\w\-\/]+ [\w\-\/]+"));
         }
 
         [Test]
@@ -39,7 +39,7 @@ namespace Faker.Tests
             var bs = Company.BS();
             Console.WriteLine($@"BS=[{bs}]");
 
-            Assert.IsTrue(Regex.IsMatch(bs, @"[\w\-]+ [\w\-]+ [\w\-]+"));
+            Assert.IsTrue(Regex.IsMatch(bs, @"[\w\-\/]+ [\w\-\/]+ [\w\-\/]+"));
         }
     }
 }
