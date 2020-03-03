@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Faker.Net</id>
-    <version>{version}</version>
+    <version>1.0</version>
     <authors>Ben Smith,Ollie Riches,Robin Michael</authors>
     <owners>Ben Smith,Ollie Riches,Robin Michael</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
