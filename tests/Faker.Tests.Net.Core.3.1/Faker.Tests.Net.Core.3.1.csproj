@@ -15,6 +15,7 @@
     <Compile Include="..\Faker.Tests\Extensions\EnumerableExtensionsFixture.cs" Link="Extensions\EnumerableExtensionsFixture.cs" />
     <Compile Include="..\Faker.Tests\Extensions\StringExtensionsFixture.cs" Link="Extensions\StringExtensionsFixture.cs" />
     <Compile Include="..\Faker.Tests\FinanceFixture.cs" Link="FinanceFixture.cs" />
+    <Compile Include="..\Faker.Tests\IdentificationFixture.cs" Link="IdentificationFixture.cs" />
     <Compile Include="..\Faker.Tests\InternetFixture.cs" Link="InternetFixture.cs" />
     <Compile Include="..\Faker.Tests\LoremFixture.cs" Link="LoremFixture.cs" />
     <Compile Include="..\Faker.Tests\NameFixture.cs" Link="NameFixture.cs" />
