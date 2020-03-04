@@ -13,7 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
-	<LangVersion>8.0</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -104,6 +104,9 @@
     <Compile Include="..\Faker\Resources\Currency.Designer.cs">
       <Link>Resources\Currency.Designer.cs</Link>
     </Compile>
+    <Compile Include="..\Faker\Resources\Identification.Designer.cs">
+      <Link>Resources\Identification.Designer.cs</Link>
+    </Compile>
     <Compile Include="..\Faker\Resources\Internet.Designer.cs">
       <Link>Resources\Internet.Designer.cs</Link>
     </Compile>
@@ -141,6 +144,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="..\Faker\Resources\Currency.resx">
       <Link>Resources\Currency.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Faker\Resources\Identification.de-DE.resx">
+      <Link>Resources\Identification.de-DE.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Faker\Resources\Identification.resx">
+      <Link>Resources\Identification.resx</Link>
     </EmbeddedResource>
     <EmbeddedResource Include="..\Faker\Resources\Internet.de-DE.resx">
       <Link>Resources\Internet.de-DE.resx</Link>

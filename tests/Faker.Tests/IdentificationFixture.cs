@@ -4,15 +4,22 @@ using NUnit.Framework;
 
 namespace Faker.Tests
 {
+    [TestFixture]
     public class IdentificationFixture
     {
+        private static readonly Regex NineDigitRegex = new Regex(@"^[0-9]{9,9}$", RegexOptions.Compiled);
+
         [Test]
-        public void Should_Create_DateOfBirth()
+        public void Should_Create_DOB()
         {
+            var now = DateTime.UtcNow.Date;
+
             var dob = Identification.DateOfBirth();
             Console.WriteLine($@"DateOfBirth=[{dob:O}]");
-            Assert.IsTrue(dob < DateTime.UtcNow);
-            Assert.IsTrue(dob > DateTime.UtcNow.AddYears(Identification.MaxAgeAllowed * -1));
+
+            Assert.IsTrue(dob < now);
+            Assert.IsTrue(dob > now.AddYears(Identification.MaxAgeAllowed * -1));
+            Assert.That(dob.TimeOfDay, Is.EqualTo(TimeSpan.Zero));
         }
 
         [Test]
@@ -54,7 +61,7 @@ namespace Faker.Tests
             var passport = Identification.UsPassportNumber();
             Console.WriteLine($@"PassportNumber=[{passport}]");
 
-            Assert.IsTrue(Regex.IsMatch(passport, @"^[0-9]{9,9}$"));
+            Assert.IsTrue(NineDigitRegex.IsMatch(passport));
         }
 
         [Test]
@@ -63,7 +70,7 @@ namespace Faker.Tests
             var passport = Identification.UkPassportNumber();
             Console.WriteLine($@"PassportNumber=[{passport}]");
 
-            Assert.IsTrue(Regex.IsMatch(passport, @"^[0-9]{9,9}$"));
+            Assert.IsTrue(NineDigitRegex.IsMatch(passport));
         }
     }
 }

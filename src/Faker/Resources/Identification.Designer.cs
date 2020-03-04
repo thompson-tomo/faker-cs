@@ -22,14 +22,14 @@ namespace Faker.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Country {
+    internal class Identification {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Country() {
+        internal Identification() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Faker.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Faker.Resources.Country", typeof(Country).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Faker.Resources.Identification", typeof(Identification).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -59,19 +59,28 @@ namespace Faker.Resources {
                 resourceCulture = value;
             }
         }
-      
-        internal static string Iso2LetterCodes {
-            get {
-                return ResourceManager.GetString("Iso2LetterCodes", resourceCulture);
-            }
+
+        internal static string Alphabet {
+            get { return ResourceManager.GetString("Alphabet", resourceCulture); }
         }
 
-        internal static string Names
+        internal static string Numeric {
+            get { return ResourceManager.GetString("Numeric", resourceCulture); }
+        }
+
+        internal static string MbiNumeric
         {
-            get
-            {
-                return ResourceManager.GetString("Names", resourceCulture);
-            }
+            get { return ResourceManager.GetString("MbiNumeric", resourceCulture); }
+        }
+
+        internal static string MbiAlphabet
+        {
+            get { return ResourceManager.GetString("MbiAlphabet", resourceCulture); }
+        }
+
+        internal static string Mbi
+        {
+            get { return ResourceManager.GetString("Mbi", resourceCulture); }
         }
     }
 }

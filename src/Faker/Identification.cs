@@ -8,11 +8,6 @@ namespace Faker
 {
     public static class Identification
     {
-        private const string Alpha = "ACDEFGHJKMNPQRTUVWXY";
-        private const string Numeric = "0123456789";
-        private static readonly string AlphaNumeric = string.Join("", Alpha, Numeric);
-        private static readonly string Numeric19 = Numeric.Substring(1);
-
         /*
         Position 1 – numeric values 1 thru 9
         Position 2 – alphabetic values A thru Z (minus S, L, O, I, B, Z)
@@ -31,17 +26,17 @@ namespace Faker
         {
             return string.Join("", new[]
             {
-                Numeric19.ElementAt(RandomNumber.Next(0, Numeric19.Length)),
-                Alpha.ElementAt(RandomNumber.Next(0, Alpha.Length)),
-                AlphaNumeric.ElementAt(RandomNumber.Next(0, AlphaNumeric.Length)),
-                Numeric.ElementAt(RandomNumber.Next(0, Numeric.Length)),
-                Alpha.ElementAt(RandomNumber.Next(0, Alpha.Length)),
-                AlphaNumeric.ElementAt(RandomNumber.Next(0, AlphaNumeric.Length)),
-                Numeric.ElementAt(RandomNumber.Next(0, Numeric.Length)),
-                Alpha.ElementAt(RandomNumber.Next(0, Alpha.Length)),
-                Alpha.ElementAt(RandomNumber.Next(0, Alpha.Length)),
-                Numeric.ElementAt(RandomNumber.Next(0, Numeric.Length)),
-                Numeric.ElementAt(RandomNumber.Next(0, Numeric.Length))
+                Resources.Identification.MbiNumeric.Split(Config.Separator).Random(),
+                Resources.Identification.MbiAlphabet.Split(Config.Separator).Random(),
+                Resources.Identification.Mbi.Split(Config.Separator).Random(),
+                Resources.Identification.Numeric.Split(Config.Separator).Random(),
+                Resources.Identification.MbiAlphabet.Split(Config.Separator).Random(),
+                Resources.Identification.Mbi.Split(Config.Separator).Random(),
+                Resources.Identification.Numeric.Split(Config.Separator).Random(),
+                Resources.Identification.MbiAlphabet.Split(Config.Separator).Random(),
+                Resources.Identification.MbiAlphabet.Split(Config.Separator).Random(),
+                Resources.Identification.Numeric.Split(Config.Separator).Random(),
+                Resources.Identification.Numeric.Split(Config.Separator).Random(),
             });
         }
 
@@ -99,9 +94,10 @@ namespace Faker
 
         public static DateTime DateOfBirth()
         {
-            var rnd = new Random((int) DateTime.UtcNow.Ticks);
+            var rnd = new Random((int)DateTime.UtcNow.Ticks);
             var first = rnd.NextDouble();
             var second = rnd.NextDouble();
+
             var randStdNormal = Math.Sqrt(-2.0 * Math.Log(first)) * Math.Sin(2.0 * Math.PI * second);
             const double average = MaxAgeAllowed * .5;
             var randNormal = average + 46 * randStdNormal;
@@ -117,19 +113,41 @@ namespace Faker
                 randomDay = RandomNumber.Next(1, now.DayOfYear);
             }
             var gaussianDate = now.AddYears(yearsToSubtract * -1).AddDays(randomDay * -1);
-            return gaussianDate;
+            return gaussianDate.Date;
         }
 
-        private static readonly string[] _alphabet = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z".Split(' ');
-
-        public static string UKNationalInsuranceNumber()
+        public static string UkNationalInsuranceNumber()
         {
-            var NINumber = new StringBuilder();
-            NINumber.Append(_alphabet.Random());
-            NINumber.Append(_alphabet.Random());
-            for (var i = 0; i < 6; i++) NINumber.Append(RandomNumber.Next(0, 9));
-            NINumber.Append(_alphabet.Random());
-            return NINumber.ToString();
+            var niNumber = new StringBuilder();
+            niNumber.Append(Resources.Identification.Alphabet.Split(Config.Separator).Random());
+            niNumber.Append(Resources.Identification.Alphabet.Split(Config.Separator).Random());
+
+            for (var i = 0; i < 6; i++)
+                niNumber.Append(RandomNumber.Next(0, 9));
+
+            niNumber.Append(Resources.Identification.Alphabet.Split(Config.Separator).Random());
+
+            return niNumber.ToString();
+        }
+
+        public static string UkPassportNumber()
+        {
+            return NineDigitPassportNumber();
+        }
+
+        public static string UsPassportNumber()
+        {
+            return NineDigitPassportNumber();
+        }
+
+        private static string NineDigitPassportNumber()
+        {
+            var passportNumber = new StringBuilder();
+
+            for (var i = 0; i < 9; i++)
+                passportNumber.Append(Resources.Identification.Numeric.Split(Config.Separator).Random());
+
+            return passportNumber.ToString();
         }
     }
 }

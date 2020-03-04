@@ -35,6 +35,7 @@
     <Compile Include="..\Faker\Resources\Company.Designer.cs" Link="Resources\Company.Designer.cs" />
     <Compile Include="..\Faker\Resources\Country.Designer.cs" Link="Resources\Country.Designer.cs" />
     <Compile Include="..\Faker\Resources\Currency.Designer.cs" Link="Resources\Currency.Designer.cs" />
+    <Compile Include="..\Faker\Resources\Identification.Designer.cs" Link="Resources\Identification.Designer.cs" />
     <Compile Include="..\Faker\Resources\Internet.Designer.cs" Link="Resources\Internet.Designer.cs" />
     <Compile Include="..\Faker\Resources\Lorem.Designer.cs" Link="Resources\Lorem.Designer.cs" />
     <Compile Include="..\Faker\Resources\Name.Designer.cs" Link="Resources\Name.Designer.cs" />
@@ -50,6 +51,8 @@
     <EmbeddedResource Include="..\Faker\Resources\Country.resx" Link="Resources\Country.resx" />
     <EmbeddedResource Include="..\Faker\Resources\Currency.de-DE.resx" Link="Resources\Currency.de-DE.resx" />
     <EmbeddedResource Include="..\Faker\Resources\Currency.resx" Link="Resources\Currency.resx" />
+    <EmbeddedResource Include="..\Faker\Resources\Identification.de-DE.resx" Link="Resources\Identification.de-DE.resx" />
+    <EmbeddedResource Include="..\Faker\Resources\Identification.resx" Link="Resources\Identification.resx" />
     <EmbeddedResource Include="..\Faker\Resources\Internet.de-DE.resx" Link="Resources\Internet.de-DE.resx" />
     <EmbeddedResource Include="..\Faker\Resources\Internet.resx" Link="Resources\Internet.resx" />
     <EmbeddedResource Include="..\Faker\Resources\Lorem.de-DE.resx" Link="Resources\Lorem.de-DE.resx" />
