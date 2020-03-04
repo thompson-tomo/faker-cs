@@ -62,6 +62,24 @@ namespace Faker.Tests
         }
 
         [Test]
+        public void Should_Get_Url()
+        {
+            var url = Internet.Url();
+            Console.WriteLine($@"Url=[{url}]");
+
+            Assert.IsTrue(Regex.IsMatch(url, @"(http:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})"));
+        }
+
+        [Test]
+        public void Should_Get_Secure_Url()
+        {
+            var url = Internet.SecureUrl();
+            Console.WriteLine($@"Url=[{url}]");
+
+            Assert.IsTrue(Regex.IsMatch(url, @"(https:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})"));
+        }
+
+        [Test]
         public void Should_Get_Domain_Word()
         {
             var word = Internet.DomainWord();
