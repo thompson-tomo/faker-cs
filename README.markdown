@@ -13,9 +13,10 @@ C# port of the Ruby Faker gem (http://faker.rubyforge.org/) and is used to easil
 	currencies,
 	enums,
 	finance (isin, ticker, coupon, maturity, bond name),
+	identification (social security number US), national insurance number (UK), passport number (UK & US))
 	internet (email, domain names, user names),
-	names,
 	lorem ipsum,
+	names,
 	phone numbers
 
 Available as a NuGet package (https://nuget.org/packages/Faker.Net).
