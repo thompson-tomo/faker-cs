@@ -124,12 +124,12 @@
     <value>gmail.com;yahoo.com;hotmail.com</value>
   </data>
   <data name="Page" xml:space="preserve">
-    <value>index;page;root;resource;form;applet;template;</value>
+    <value>index;page;root;resource;form;applet;template</value>
   </data>
   <data name="PageSuffix" xml:space="preserve">
-    <value>html;htm;asp;aspx;gem;lsp;jsp;res;rsx;</value>
+    <value>html;htm;asp;aspx;gem;lsp;jsp;res;rsx</value>
   </data>
   <data name="SubDomain" xml:space="preserve">
-    <value>home;interviews;articles;facts;shop;catalog;reviews;shop/books;shop/food;shop/films;films;guide;</value>
+    <value>home;interviews;articles;facts;shop;catalog;reviews;shop/books;shop/food;shop/films;films;guide</value>
   </data>
 </root>
