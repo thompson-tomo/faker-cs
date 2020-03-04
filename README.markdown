@@ -13,7 +13,7 @@ C# port of the Ruby Faker gem (http://faker.rubyforge.org/) and is used to easil
 	currencies,
 	enums,
 	finance (isin, ticker, coupon, maturity, bond name),
-	identification (social security number US), national insurance number (UK), passport number (UK & US))
+	identification (social security number (US), MBI (US), national insurance number (UK), passport number (UK & US))
 	internet (email, domain names, user names),
 	lorem ipsum,
 	names,
