@@ -15,7 +15,7 @@ namespace Faker.Tests
             var now = DateTime.UtcNow.Date;
 
             var dob = Identification.DateOfBirth();
-            Console.WriteLine($@"DateOfBirth=[{dob:O}]");
+            Console.WriteLine($@"DateOfBirth=[{dob:d}]");
 
             Assert.IsTrue(dob < now);
             Assert.IsTrue(dob > now.AddYears(Identification.MaxAgeAllowed * -1));
