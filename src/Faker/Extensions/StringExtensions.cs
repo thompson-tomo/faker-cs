@@ -1,10 +1,11 @@
 ﻿using System.Text.RegularExpressions;
+// ReSharper disable CheckNamespace
 
 namespace Faker.Extensions
 {
     public static class StringExtensions
     {
-        private static readonly string[] _alphabet = "a b c d e f g h i j k l m n o p q r s t u v w x y z".Split(' ');
+        private static readonly string[] Alphabet = "a b c d e f g h i j k l m n o p q r s t u v w x y z".Split(' ');
 
         /// <summary>
         ///     Get a string with every occurence of '#' replaced with a random number.
@@ -19,7 +20,7 @@ namespace Faker.Extensions
         /// </summary>
         public static string Letterify(this string s)
         {
-            return Regex.Replace(s, @"\?", m => _alphabet.Random(), RegexOptions.Compiled);
+            return Regex.Replace(s, @"\?", m => Alphabet.Random(), RegexOptions.Compiled);
         }
 
         public static string AlphanumericOnly(this string s)
