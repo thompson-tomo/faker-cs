@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.Text;
 using Faker.Extensions;
 
@@ -65,16 +64,37 @@ namespace Faker
             return !dashFormat ? ssn.Replace("-", "") : ssn;
         }
 
-        private static readonly string[] _alphabet = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z".Split(' ');
+        private static readonly string[] Alphabet = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z".Split(' ');
 
-        public static string UKNationalInsuranceNumber()
+        public static string UkNationalInsuranceNumber()
         {
-            var NINumber = new StringBuilder();
-            NINumber.Append(_alphabet.Random());
-            NINumber.Append(_alphabet.Random());
-            for (var i = 0; i < 6; i++) NINumber.Append(RandomNumber.Next(0, 9));
-            NINumber.Append(_alphabet.Random());
-            return NINumber.ToString();
+            var niNumber = new StringBuilder();
+            niNumber.Append(Alphabet.Random());
+            niNumber.Append(Alphabet.Random());
+            for (var i = 0; i < 6; i++) niNumber.Append(RandomNumber.Next(0, 9));
+            niNumber.Append(Alphabet.Random());
+            return niNumber.ToString();
+        }
+
+        public static string UkPassportNumber()
+        {
+            return NineDigitPassportNumber();
+        }
+
+        public static string UsPassportNumber()
+        {
+            return NineDigitPassportNumber();
+        }
+
+        private static string NineDigitPassportNumber()
+        {
+            var passportNumber = new StringBuilder();
+            for (var i = 0; i < 9; i++)
+            {
+                passportNumber.Append(Numeric.ElementAt(RandomNumber.Next(0, Numeric.Length)));
+            }
+
+            return passportNumber.ToString();
         }
     }
 }
