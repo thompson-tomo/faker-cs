@@ -35,6 +35,7 @@ var number = Faker.RandomNumber.Next(100); // 30
 var ssn = Faker.Identification.SocialSecurityNumber(); // 249-17-9666
 var mbi = Faker.Identification.MedicareBeneficiaryIdentifier(); // 8NK0Q74KT53
 var nin = Faker.Identification.UKNationalInsuranceNumber(); // YA171053Y
+var dob = Faker.Identification.DateOfBirth(); // 1971-11-16T04:49:22.4759507Z
 ```
 
 Supported versions:
