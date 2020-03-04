@@ -77,5 +77,29 @@ namespace Faker.Resources {
                 return ResourceManager.GetString("FreeMail", resourceCulture);
             }
         }
+
+        internal static string Page
+        {
+            get
+            {
+                return ResourceManager.GetString("Page", resourceCulture);
+            }
+        }
+
+        internal static string PageSuffix
+        {
+            get
+            {
+                return ResourceManager.GetString("PageSuffix", resourceCulture);
+            }
+        }
+
+        internal static string SubDomain
+        {
+            get
+            {
+                return ResourceManager.GetString("SubDomain", resourceCulture);
+            }
+        }
     }
 }

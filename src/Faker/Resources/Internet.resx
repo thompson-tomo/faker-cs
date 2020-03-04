@@ -112,15 +112,24 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DomainSuffix" xml:space="preserve">
     <value>co.uk;com;us;uk;ca;biz;info;name</value>
   </data>
   <data name="FreeMail" xml:space="preserve">
     <value>gmail.com;yahoo.com;hotmail.com</value>
+  </data>
+  <data name="Page" xml:space="preserve">
+    <value>index;page;root;resource;form;applet;template;</value>
+  </data>
+  <data name="PageSuffix" xml:space="preserve">
+    <value>html;htm;asp;aspx;gem;lsp;jsp;res;rsx;</value>
+  </data>
+  <data name="SubDomain" xml:space="preserve">
+    <value>home;interviews;articles;facts;shop;catalog;reviews;shop/books;shop/food;shop/films;films;guide;</value>
   </data>
 </root>

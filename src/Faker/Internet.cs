@@ -48,16 +48,18 @@ namespace Faker
 
         public static string Url()
         {
-            var subDomain = SubDomain();
-            var page = Page();
-            return $"http://www.{DomainName()}/{subDomain}/{page}.html";
+            var subDomain = Resources.Internet.SubDomain.Split(Config.Separator).Random();
+            var page = Resources.Internet.Page.Split(Config.Separator).Random();
+            var pageSuffix = Resources.Internet.PageSuffix.Split(Config.Separator).Random();
+            return $"http://www.{DomainName()}/{subDomain}/{page}.{pageSuffix}";
         }
 
         public static string SecureUrl()
         {
-            var subDomain = SubDomain();
-            var page = Page();
-            return $"https://www.{DomainName()}/{subDomain}/{page}.html";
+            var subDomain = Resources.Internet.SubDomain.Split(Config.Separator).Random();
+            var page = Resources.Internet.Page.Split(Config.Separator).Random();
+            var pageSuffix = Resources.Internet.PageSuffix.Split(Config.Separator).Random();
+            return $"https://www.{DomainName()}/{subDomain}/{page}.{pageSuffix}";
         }
 
         public static string DomainWord()
@@ -68,20 +70,6 @@ namespace Faker
         public static string DomainSuffix()
         {
             return Resources.Internet.DomainSuffix.Split(Config.Separator).Random();
-        }
-
-        private static string SubDomain()
-        {
-            return string.Join("",
-                Enumerable.Range(1, RandomNumber.Next(5, 12))
-                    .Select(x => Resources.Identification.Alphabet.Split(Config.Separator).Random().ToLower()));
-        }
-
-        private static string Page()
-        {
-            return string.Join("",
-                Enumerable.Range(1, RandomNumber.Next(3, 8))
-                    .Select(x => Resources.Identification.Alphabet.Split(Config.Separator).Random().ToLower()));
         }
     }
 }
