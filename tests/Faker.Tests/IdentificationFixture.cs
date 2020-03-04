@@ -4,16 +4,30 @@ using NUnit.Framework;
 
 namespace Faker.Tests
 {
-    [TestFixture]
     public class IdentificationFixture
     {
         [Test]
+        public void Should_Create_DateOfBirth()
+        {
+            var dob = Identification.DateOfBirth();
+            Console.WriteLine($@"DateOfBirth=[{dob:O}]");
+            Assert.IsTrue(dob < DateTime.UtcNow);
+            Assert.IsTrue(dob > DateTime.UtcNow.AddYears(Identification.MaxAgeAllowed * -1));
+        }
+
+        [Test]
         public void Should_Create_SSN()
         {
-            var ssn = Identification.SocialSecurityNumber();
-            Console.WriteLine($@"SocialSecurityNumber=[{ssn}]");
-            
-            Assert.IsTrue(Regex.IsMatch(ssn, @"\d{3}-\d{2}-\d{4}"));
+            var ssn = new
+            {
+                WithDashes = Identification.SocialSecurityNumber(),
+                Without = Identification.SocialSecurityNumber(false)
+            };
+
+            Console.WriteLine($@"SocialSecurityNumber=[{ssn.WithDashes}]");
+            Assert.IsTrue(Regex.IsMatch(ssn.WithDashes, @"\d{3}-\d{2}-\d{4}"));
+            Console.WriteLine($@"SocialSecurityNumber=[{ssn.Without}]");
+            Assert.IsTrue(Regex.IsMatch(ssn.Without, @"\d{9}"));
         }
 
         [Test]
