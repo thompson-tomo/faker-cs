@@ -1,5 +1,6 @@
 # Faker
 
+[![NuGet](https://img.shields.io/nuget/v/Faker.Net.svg)](https://www.nuget.org/packages/Faker.Net)
 [![Build status](https://ci.appveyor.com/api/projects/status/uy628dn0tfl0triy?svg=true)](https://ci.appveyor.com/project/oriches/faker-cs)
 
 Codebase is built with AppVeyor and manually deployed to the offical nuGet feed from there.
