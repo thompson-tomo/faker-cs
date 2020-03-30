@@ -8,6 +8,7 @@ namespace Faker
     public enum NameFormats
     {
         Standard,
+        StandardWithMiddle,
         WithPrefix,
         WithSuffix
     }
@@ -24,6 +25,7 @@ namespace Faker
             new Dictionary<NameFormats, Func<string[]>>
             {
                 {NameFormats.Standard, () => new[] {First(), Last()}},
+                {NameFormats.StandardWithMiddle, () => new[] {First(), Middle(), Last()}},
                 {NameFormats.WithPrefix, () => new[] {Prefix(), First(), Last()}},
                 {NameFormats.WithSuffix, () => new[] {First(), Last(), Suffix()}}
             };
@@ -45,6 +47,11 @@ namespace Faker
         }
 
         public static string First()
+        {
+            return Resources.Name.First.Split(Config.Separator).Random().Trim();
+        }
+
+        public static string Middle()
         {
             return Resources.Name.First.Split(Config.Separator).Random().Trim();
         }

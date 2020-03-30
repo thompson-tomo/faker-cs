@@ -29,6 +29,15 @@ namespace Faker.Tests
         }
 
         [Test]
+        public void Should_Get_FullName_With_Standard_With_Middle_Format()
+        {
+            var name = Name.FullName(NameFormats.StandardWithMiddle);
+            Console.WriteLine($@"Name=[{name}]");
+
+            Assert.IsTrue(Regex.IsMatch(name, @"^\w+\.? \w+\.? \w+\'?\.?$"));
+        }
+
+        [Test]
         public void Should_Get_Prefix()
         {
             var prefix = Name.Prefix();
