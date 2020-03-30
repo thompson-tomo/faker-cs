@@ -1,5 +1,6 @@
 # Faker
 
+[![NuGet](https://img.shields.io/nuget/v/faker.net.svg)](https://www.nuget.org/packages/faker.net)
 [![Build status](https://ci.appveyor.com/api/projects/status/uy628dn0tfl0triy?svg=true)](https://ci.appveyor.com/project/oriches/faker-cs)
 
 Codebase is built with AppVeyor and manually deployed to the offical nuGet feed from there.
@@ -37,8 +38,8 @@ var ssn = Faker.Identification.SocialSecurityNumber(); // 249-17-9666
 var mbi = Faker.Identification.MedicareBeneficiaryIdentifier(); // 8NK0Q74KT53
 var nin = Faker.Identification.UkNationalInsuranceNumber(); // YA171053Y
 var dob = Faker.Identification.DateOfBirth(); // 1971-11-16T00:00:00.0000000Z
-var ukPassport = Faker.Identification.UkPassport; // 496675685
-var usPassport = Faker.Identification.UsPassport; // 335587506
+var ukPassport = Faker.Identification.UkPassport(); // 496675685
+var usPassport = Faker.Identification.UsPassport(); // 335587506
 
 ```
 
