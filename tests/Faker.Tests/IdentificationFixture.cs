@@ -80,7 +80,7 @@ namespace Faker.Tests
             var passport = Identification.BulgarianPIN();
             Console.WriteLine($@"BGPIN=[{passport}]");
 
-            Assert.IsTrue(NineDigitRegex.IsMatch(passport));
+            Assert.IsTrue(TenDigitRegex.IsMatch(passport));
         }
     }
 }
