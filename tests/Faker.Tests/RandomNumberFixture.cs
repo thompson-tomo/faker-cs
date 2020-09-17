@@ -18,9 +18,9 @@ namespace Faker.Tests
             var results = Enumerable.Range(0, maxExclusiveLimit).ToDictionary(k => k, k => false);
             do
             {
-                var coinFlip = RandomNumber.Next(0, maxExclusiveLimit);
-                results[coinFlip] = true;
-                Console.WriteLine($@"RandomNumber.Next(0,maxValueExclusive)=[{coinFlip}]");
+                var randValue = RandomNumber.Next(0, maxExclusiveLimit);
+                results[randValue] = true;
+                Console.WriteLine($@"RandomNumber.Next(0,maxValueExclusive)=[{randValue}]");
             } while (!results.All(j => j.Value));
             Assert.IsTrue(results.Select(z => z.Value).All(y => y));
         }
