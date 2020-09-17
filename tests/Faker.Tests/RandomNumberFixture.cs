@@ -20,7 +20,7 @@ namespace Faker.Tests
             {
                 var randValue = RandomNumber.Next(0, maxExclusiveLimit);
                 results[randValue] = true;
-                Console.WriteLine($@"RandomNumber.Next(0,maxValueExclusive)=[{randValue}]");
+                Console.WriteLine($@"RandomNumber.Next(0,{maxExclusiveLimit})=[{randValue}]");
             } while (!results.All(j => j.Value));
             Assert.IsTrue(results.Select(z => z.Value).All(y => y));
         }
