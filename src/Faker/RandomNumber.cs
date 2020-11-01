@@ -9,6 +9,11 @@ namespace Faker
 
         private static int Next(this RandomNumberGenerator generator, int min, int max)
         {
+            // Catch divide by zero case
+            if (max == 0 && min == 0)
+            {
+                return 0;
+            }
             // match Next of Random
             // where max is exclusive
             max = max - 1;
@@ -22,16 +27,34 @@ namespace Faker
             return result;
         }
 
+        /// <summary>
+        /// Matches behavior from Random.Next from https://docs.microsoft.com/en-us/dotnet/api/system.random.next?view=netcore-3.1
+        /// A 32-bit signed integer that is greater than or equal to 0 and less than MaxValue or int.MaxValue
+        /// </summary>
+        /// <returns></returns>
         public static int Next()
         {
             return Rnd.Next(0, int.MaxValue);
         }
 
+        /// <summary>
+        /// Matches behavior from Random.Next from https://docs.microsoft.com/en-us/dotnet/api/system.random.next?view=netcore-3.1
+        /// A 32-bit signed integer that is greater than or equal to 0 and less than MaxValue. 
+        /// </summary>
+        /// <param name="max"></param>
+        /// <returns></returns>
         public static int Next(int max)
         {
             return Rnd.Next(0, max);
         }
 
+        /// <summary>
+        /// Matches behavior from Random.Next from https://docs.microsoft.com/en-us/dotnet/api/system.random.next?view=netcore-3.1
+        /// A 32-bit signed integer that is greater than or equal to 0 and less than MaxValue. 
+        /// </summary>
+        /// <param name="min"></param>
+        /// <param name="max"></param>
+        /// <returns></returns>
         public static int Next(int min, int max)
         {
             return Rnd.Next(min, max);
