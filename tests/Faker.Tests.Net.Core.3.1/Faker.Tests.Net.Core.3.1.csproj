@@ -21,7 +21,7 @@
     <Compile Include="..\Faker.Tests\LoremFixture.cs" Link="LoremFixture.cs" />
     <Compile Include="..\Faker.Tests\NameFixture.cs" Link="NameFixture.cs" />
     <Compile Include="..\Faker.Tests\PhoneFixture.cs" Link="PhoneFixture.cs" />
-    <Compile Include="..\Faker.Tests\RamdonFixtures.cs" Link="RamdonFixtures.cs" />
+    <Compile Include="..\Faker.Tests\RandomNumberFixture.cs" Link="RandomNumberFixture.cs" />
   </ItemGroup>
 
   <ItemGroup>

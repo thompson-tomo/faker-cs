@@ -11,6 +11,15 @@ namespace Faker.Tests
         private static readonly Regex TenDigitRegex = new Regex(@"^[0-9]{10,10}$", RegexOptions.Compiled);
 
         [Test]
+        public void Should_Create_BG_Pin()
+        {
+            var passport = Identification.BulgarianPin();
+            Console.WriteLine($@"BGPIN=[{passport}]");
+
+            Assert.IsTrue(TenDigitRegex.IsMatch(passport));
+        }
+
+        [Test]
         public void Should_Create_DOB()
         {
             var now = DateTime.UtcNow.Date;
@@ -21,6 +30,16 @@ namespace Faker.Tests
             Assert.IsTrue(dob < now);
             Assert.IsTrue(dob > now.AddYears(Identification.MaxAgeAllowed * -1));
             Assert.That(dob.TimeOfDay, Is.EqualTo(TimeSpan.Zero));
+        }
+
+        [Test]
+        public void Should_Create_MBI()
+        {
+            var mbi = Identification.MedicareBeneficiaryIdentifier();
+            Console.WriteLine($@"MedicareBeneficiaryIdentifier=[{mbi}]");
+
+            Assert.IsTrue(Regex.IsMatch(mbi,
+                @"\b[1-9][AC-HJKMNP-RT-Yac-hjkmnp-rt-y][AC-HJKMNP-RT-Yac-hjkmnp-rt-y0-9][0-9]-?[AC-HJKMNP-RT-Yac-hjkmnp-rt-y][AC-HJKMNP-RT-Yac-hjkmnp-rt-y0-9][0-9]-?[AC-HJKMNP-RT-Yac-hjkmnp-rt-y]{2}\d{2}\b"));
         }
 
         [Test]
@@ -39,12 +58,12 @@ namespace Faker.Tests
         }
 
         [Test]
-        public void Should_Create_MBI()
+        public void Should_Create_UK_PassportNumber()
         {
-            var mbi = Identification.MedicareBeneficiaryIdentifier();
-            Console.WriteLine($@"MedicareBeneficiaryIdentifier=[{mbi}]");
+            var passport = Identification.UkPassportNumber();
+            Console.WriteLine($@"PassportNumber=[{passport}]");
 
-            Assert.IsTrue(Regex.IsMatch(mbi, @"\b[1-9][AC-HJKMNP-RT-Yac-hjkmnp-rt-y][AC-HJKMNP-RT-Yac-hjkmnp-rt-y0-9][0-9]-?[AC-HJKMNP-RT-Yac-hjkmnp-rt-y][AC-HJKMNP-RT-Yac-hjkmnp-rt-y0-9][0-9]-?[AC-HJKMNP-RT-Yac-hjkmnp-rt-y]{2}\d{2}\b"));
+            Assert.IsTrue(NineDigitRegex.IsMatch(passport));
         }
 
         [Test]
@@ -63,24 +82,6 @@ namespace Faker.Tests
             Console.WriteLine($@"PassportNumber=[{passport}]");
 
             Assert.IsTrue(NineDigitRegex.IsMatch(passport));
-        }
-
-        [Test]
-        public void Should_Create_UK_PassportNumber()
-        {
-            var passport = Identification.UkPassportNumber();
-            Console.WriteLine($@"PassportNumber=[{passport}]");
-
-            Assert.IsTrue(NineDigitRegex.IsMatch(passport));
-        }
-
-        [Test]
-        public void Should_Create_BG_PIN()
-        {
-            var passport = Identification.BulgarianPIN();
-            Console.WriteLine($@"BGPIN=[{passport}]");
-
-            Assert.IsTrue(TenDigitRegex.IsMatch(passport));
         }
     }
 }

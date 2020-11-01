@@ -25,7 +25,7 @@ namespace Faker
             var length = RandomNumber.Next(2, 4);
 
             return new string(Enumerable.Repeat(TickerCharacters, length)
-                .Select(s => s[RandomNumber.Next(s.Length)]).ToArray());
+                .Select(s => s[RandomNumber.Next(s.Length - 1)]).ToArray());
         }
 
         public static DateTime Maturity(int minimumMaturityInMonths = 6, int maximumMaturityInMonths = 180)
@@ -141,6 +141,24 @@ namespace Faker
 
         public static class Credit
         {
+            public static string BondName()
+            {
+                return BondClass().ToString();
+            }
+
+            public static Bond BondClass()
+            {
+                var ticker = Ticker();
+                var coupon = Coupon();
+                var maturity = Maturity();
+
+                if (Equals(Thread.CurrentThread.CurrentCulture, UsCulture) ||
+                    Equals(Thread.CurrentThread.CurrentUICulture, UsCulture))
+                    return new Bond(ticker, coupon, maturity, "MM/dd/yy");
+
+                return new Bond(ticker, coupon, maturity, "dd/MM/yy");
+            }
+
             public struct Bond
             {
                 private readonly string _toString;
@@ -164,27 +182,7 @@ namespace Faker
                 public override string ToString()
                 {
                     return _toString;
-            }
-            }
-
-            public static string BondName()
-            {
-                return BondClass().ToString();
-            }
-
-            public static Bond BondClass()
-            {
-                var ticker = Ticker();
-                var coupon = Coupon();
-                var maturity = Maturity();
-
-                if (Equals(Thread.CurrentThread.CurrentCulture, UsCulture) ||
-                    Equals(Thread.CurrentThread.CurrentUICulture, UsCulture))
-                {
-                    return new Bond(ticker, coupon, maturity, "MM/dd/yy");
                 }
-
-                return new Bond(ticker, coupon, maturity, "dd/MM/yy");
             }
         }
     }

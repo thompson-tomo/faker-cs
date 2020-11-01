@@ -84,6 +84,9 @@
     <Compile Include="..\Faker.Tests\PhoneFixture.cs">
       <Link>PhoneFixture.cs</Link>
     </Compile>
+    <Compile Include="..\Faker.Tests\RandomNumberFixture.cs">
+      <Link>RandomNumberFixture.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
