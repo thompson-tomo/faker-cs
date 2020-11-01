@@ -9,10 +9,6 @@ namespace Faker
 
         private static int Next(this RandomNumberGenerator generator, int min, int max)
         {
-            // match Next of Random
-            // where max is exclusive
-            max = max - 1;
-
             var bytes = new byte[sizeof(int)]; // 4 bytes
             generator.GetNonZeroBytes(bytes);
             var val = BitConverter.ToInt32(bytes, 0);

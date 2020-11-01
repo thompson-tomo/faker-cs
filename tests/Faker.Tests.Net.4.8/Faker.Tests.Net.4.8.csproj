@@ -13,7 +13,7 @@
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
-	<LangVersion>8.0</LangVersion>
+    <LangVersion>8.0</LangVersion>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -83,6 +83,9 @@
     </Compile>
     <Compile Include="..\Faker.Tests\PhoneFixture.cs">
       <Link>PhoneFixture.cs</Link>
+    </Compile>
+    <Compile Include="..\Faker.Tests\RamdonFixtures.cs">
+      <Link>RamdonFixtures.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

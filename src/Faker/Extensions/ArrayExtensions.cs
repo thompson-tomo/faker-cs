@@ -14,7 +14,7 @@ namespace Faker.Extensions
         {
             if (list.Length == 0) throw new InvalidOperationException("Array must contain at least one item");
 
-            return list[RandomNumber.Next(0, list.Length)];
+            return list[RandomNumber.Next(0, list.Length - 1)];
         }
 
         /// <summary>
@@ -24,7 +24,7 @@ namespace Faker.Extensions
         {
             if (!list.Any()) throw new InvalidOperationException("Enumerable list must contain at least one item");
 
-            return list.ElementAt(RandomNumber.Next(0, list.Count())).Invoke();
+            return list.ElementAt(RandomNumber.Next(0, list.Count() - 1)).Invoke();
         }
 
         /// <summary>
@@ -34,7 +34,7 @@ namespace Faker.Extensions
         {
             if (!list.Any()) throw new InvalidOperationException("Enumerable list must contain at least one item");
 
-            return list.ElementAt(RandomNumber.Next(0, list.Count())).Invoke();
+            return list.ElementAt(RandomNumber.Next(0, list.Count() - 1)).Invoke();
         }
     }
 }
