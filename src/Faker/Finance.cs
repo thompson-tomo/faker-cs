@@ -48,7 +48,7 @@ namespace Faker
         private static string SecurityIdentifier()
         {
             return new string(Enumerable.Repeat(SecurityCharacters, 9)
-                .Select(s => s[RandomNumber.Next(s.Length)]).ToArray());
+                .Select(s => s[RandomNumber.Next(s.Length - 1)]).ToArray());
         }
 
         private static int CalculateChecksum(IEnumerable<char> codeWithoutChecksum, bool reverseLuhn = false,
