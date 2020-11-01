@@ -14,7 +14,7 @@ C# port of the Ruby Faker gem (http://faker.rubyforge.org/) and is used to easil
 	currencies,
 	enums,
 	finance (isin, ticker, coupon, maturity, bond name),
-	identification (social security number (US), MBI (US), national insurance number (UK), passport number (UK & US))
+	identification (social security number (US), MBI (US), national insurance number (UK), passport number (UK & US), Bulgarian Person Identification Number(PIN/ENG))
 	internet (email, domain names, user names),
 	lorem ipsum,
 	names,
@@ -40,6 +40,7 @@ var nin = Faker.Identification.UkNationalInsuranceNumber(); // YA171053Y
 var dob = Faker.Identification.DateOfBirth(); // 1971-11-16T00:00:00.0000000Z
 var ukPassport = Faker.Identification.UkPassport(); // 496675685
 var usPassport = Faker.Identification.UsPassport(); // 335587506
+var BulgarianPIN = Faker.Identification.BulgarianPIN(); //6402142606
 
 ```
 

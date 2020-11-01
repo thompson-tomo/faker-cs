@@ -8,6 +8,7 @@ namespace Faker.Tests
     public class IdentificationFixture
     {
         private static readonly Regex NineDigitRegex = new Regex(@"^[0-9]{9,9}$", RegexOptions.Compiled);
+        private static readonly Regex TenDigitRegex = new Regex(@"^[0-9]{10,10}$", RegexOptions.Compiled);
 
         [Test]
         public void Should_Create_DOB()
@@ -71,6 +72,15 @@ namespace Faker.Tests
             Console.WriteLine($@"PassportNumber=[{passport}]");
 
             Assert.IsTrue(NineDigitRegex.IsMatch(passport));
+        }
+
+        [Test]
+        public void Should_Create_BG_PIN()
+        {
+            var passport = Identification.BulgarianPIN();
+            Console.WriteLine($@"BGPIN=[{passport}]");
+
+            Assert.IsTrue(TenDigitRegex.IsMatch(passport));
         }
     }
 }

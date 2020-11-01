@@ -149,5 +149,92 @@ namespace Faker
 
             return passportNumber.ToString();
         }
+        /// <summary>
+        /// Generates random Bulgarian Personal Identification Number / EGN
+        /// </summary>
+        /// <returns></returns>
+        public static string BulgarianPIN()
+        {
+            return BGPIN();
+        }
+        /// <summary>
+        /// Generates random Bulgarian Personal Identification Number / EGN
+        /// </summary>
+        /// <returns></returns>
+        private static string BGPIN()
+        {
+
+            int bgRegionsRangeMin = 0;
+            int bgRegionsRangeMax = 999;
+
+            Random r = new Random();
+            StringBuilder PIN = new StringBuilder();
+            List<int> weightNumbers = new List<int> { 2, 4, 8, 5, 10, 9, 7, 3, 6 };
+            //Get Random Year
+            int yearDigit = r.Next(1800, 2100);
+            //Get Random Month 
+            int monthDigit = r.Next(1, 12);
+            //Get Random Birth Region 
+            int regionDigit = r.Next(bgRegionsRangeMin, bgRegionsRangeMax);
+
+            //Add year to th PIN 
+            //Gets Only the last two digits of the year
+            PIN.Append(yearDigit.ToString().Substring(2, 2));
+
+            //Maximum number of days in every month
+            List<KeyValuePair<int, int>> monthsData = new List<KeyValuePair<int, int>>();
+            monthsData.Add(new KeyValuePair<int, int>(1, 31));
+            monthsData.Add(new KeyValuePair<int, int>(2, 28)); // I don`t think is that important to add support for 29 of February
+            monthsData.Add(new KeyValuePair<int, int>(3, 31));
+            monthsData.Add(new KeyValuePair<int, int>(4, 30));
+            monthsData.Add(new KeyValuePair<int, int>(5, 31));
+            monthsData.Add(new KeyValuePair<int, int>(6, 30));
+            monthsData.Add(new KeyValuePair<int, int>(7, 31));
+            monthsData.Add(new KeyValuePair<int, int>(8, 31));
+            monthsData.Add(new KeyValuePair<int, int>(9, 30));
+            monthsData.Add(new KeyValuePair<int, int>(10, 31));
+            monthsData.Add(new KeyValuePair<int, int>(11, 30));
+            monthsData.Add(new KeyValuePair<int, int>(12, 31));
+            //Get Random day in current month
+            int dayDigit = r.Next(1, monthsData.Where(x => x.Key == monthDigit).Select(y => y.Value).FirstOrDefault());
+
+            //This is rule for centuries
+            if (yearDigit < 1900)
+            {
+                monthDigit = 20 + monthDigit;
+            }
+            else if (yearDigit >= 2000)
+            {
+                monthDigit = 40 + monthDigit;
+            }
+
+            //Add month to the PIN
+            PIN.Append($"{monthDigit:00}");
+            //Add day to the PIN
+            PIN.Append($"{dayDigit:00}");
+            //Add birth Region to the PIN
+            PIN.Append($"{regionDigit:000}");
+
+            //Calculate weights
+            int weigthSums = 0;
+            for (int i = 0; i < PIN.Length; i++)
+            {
+                int currentDigit = 0;
+                currentDigit = int.Parse(PIN.ToString().Substring(i, 1));
+                weigthSums += (currentDigit * weightNumbers[i]);
+            }
+            int controlNumber = weigthSums % 11;
+
+            //Get the control number
+            if (controlNumber < 10)
+            {
+                PIN.Append(controlNumber.ToString());
+            }
+            else
+            {
+                PIN.Append("0");
+            }
+            return PIN.ToString();
+        }
     }
 }
