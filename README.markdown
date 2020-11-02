@@ -40,7 +40,7 @@ var nin = Faker.Identification.UkNationalInsuranceNumber(); // YA171053Y
 var dob = Faker.Identification.DateOfBirth(); // 1971-11-16T00:00:00.0000000Z
 var ukPassport = Faker.Identification.UkPassport(); // 496675685
 var usPassport = Faker.Identification.UsPassport(); // 335587506
-var bulgarianPin = Faker.Identification.BulgarianPiN(); //6402142606
+var bulgarianPin = Faker.Identification.BulgarianPin(); //6402142606
 
 ```
 
