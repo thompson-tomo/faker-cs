@@ -37,6 +37,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuGet", "nuGet", "{513FC2C7
 		Faker.Net.nuspec = Faker.Net.nuspec
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Faker.Net.5.0", "src\Faker.Net.5.0\Faker.Net.5.0.csproj", "{B67E47FB-0064-4705-84C7-D8E6F8241CC2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{829BDFF1-A65E-456B-B55E-1D1B7043D939}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{829BDFF1-A65E-456B-B55E-1D1B7043D939}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{829BDFF1-A65E-456B-B55E-1D1B7043D939}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B67E47FB-0064-4705-84C7-D8E6F8241CC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B67E47FB-0064-4705-84C7-D8E6F8241CC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B67E47FB-0064-4705-84C7-D8E6F8241CC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B67E47FB-0064-4705-84C7-D8E6F8241CC2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
