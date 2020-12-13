@@ -54,7 +54,8 @@ Supported versions:
 	.NET Standard 2.0,
 	.NET Standard 2.1,
 	.NET Core 3.0,
-	.NET Core 3.1
+	.NET Core 3.1,
+	.NET 5.0
 
 No longer supported in nuGet package (1.1 going forward):
 
