@@ -9,7 +9,7 @@
     <FileVersion>1.0.0.0</FileVersion>
     <PackageProjectUrl>https://github.com/oriches/faker-cs</PackageProjectUrl>
     <IsPackable>false</IsPackable>
-	<LangVersion>8.0</LangVersion>
+	  <LangVersion>8.0</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
