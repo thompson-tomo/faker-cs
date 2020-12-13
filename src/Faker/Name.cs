@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using Faker.Extensions;
 
+[assembly: InternalsVisibleTo("Faker.Tests.Net.5.0")]
 namespace Faker
 {
     public enum NameFormats

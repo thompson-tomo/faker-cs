@@ -1,9 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>Faker.Tests</RootNamespace>
     <LangVersion>8.0</LangVersion>
+    <AssemblyName>Faker.Tests.Net.5.0</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
@@ -38,7 +39,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Faker.Net.Core.3.1\Faker.Net.Core.3.1.csproj" />
+    <ProjectReference Include="..\..\src\Faker.Net.5.0\Faker.Net.5.0.csproj" />
   </ItemGroup>
 
 </Project>

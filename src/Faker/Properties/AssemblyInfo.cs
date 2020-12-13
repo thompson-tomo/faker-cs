@@ -18,3 +18,4 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 [assembly: InternalsVisibleTo("Faker.Tests.Net.4.8")]
+[assembly: InternalsVisibleTo("Faker.Tests.Net.5.0")]
