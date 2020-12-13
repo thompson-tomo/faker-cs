@@ -1,8 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net5.0;netstandard2.0</TargetFrameworks>
+    <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>Faker</RootNamespace>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <PackageProjectUrl>https://github.com/oriches/faker-cs</PackageProjectUrl>
+    <IsPackable>false</IsPackable>
     <LangVersion>8.0</LangVersion>
   </PropertyGroup>
 
