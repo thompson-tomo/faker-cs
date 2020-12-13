@@ -39,6 +39,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Faker.Net.5.0", "src\Faker.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Faker.Tests.Net.5.0", "tests\Faker.Tests.Net.5.0\Faker.Tests.Net.5.0.csproj", "{5E0FC59C-B443-4946-99FD-5EFC5DCFB149}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Faker.Tests.Net.4.0", "tests\Faker.Tests.Net.4.0\Faker.Tests.Net.4.0.csproj", "{15B2EBF6-B443-412A-883F-0FE6D634A4FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{5E0FC59C-B443-4946-99FD-5EFC5DCFB149}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E0FC59C-B443-4946-99FD-5EFC5DCFB149}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E0FC59C-B443-4946-99FD-5EFC5DCFB149}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15B2EBF6-B443-412A-883F-0FE6D634A4FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15B2EBF6-B443-412A-883F-0FE6D634A4FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15B2EBF6-B443-412A-883F-0FE6D634A4FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15B2EBF6-B443-412A-883F-0FE6D634A4FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -100,6 +106,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{829BDFF1-A65E-456B-B55E-1D1B7043D939} = {E206613A-09A6-4EAF-A643-E67D8ACA71DA}
 		{5E0FC59C-B443-4946-99FD-5EFC5DCFB149} = {E206613A-09A6-4EAF-A643-E67D8ACA71DA}
+		{15B2EBF6-B443-412A-883F-0FE6D634A4FB} = {E206613A-09A6-4EAF-A643-E67D8ACA71DA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B8DFC42C-B0BF-4EC1-852D-CD82AE728643}
