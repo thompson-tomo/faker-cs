@@ -29,17 +29,28 @@ namespace Faker
         // https://www.cms.gov/Medicare/New-Medicare-Card/Understanding-the-MBI-with-Format.pdf
         public static string MedicareBeneficiaryIdentifier()
         {
-            return string.Join("", Resources.Identification.MbiNumeric.Split(Config.Separator).Random(),
-                Resources.Identification.MbiAlphabet.Split(Config.Separator).Random(),
-                Resources.Identification.Mbi.Split(Config.Separator).Random(),
-                Resources.Identification.Numeric.Split(Config.Separator).Random(),
-                Resources.Identification.MbiAlphabet.Split(Config.Separator).Random(),
-                Resources.Identification.Mbi.Split(Config.Separator).Random(),
-                Resources.Identification.Numeric.Split(Config.Separator).Random(),
-                Resources.Identification.MbiAlphabet.Split(Config.Separator).Random(),
-                Resources.Identification.MbiAlphabet.Split(Config.Separator).Random(),
-                Resources.Identification.Numeric.Split(Config.Separator).Random(),
-                Resources.Identification.Numeric.Split(Config.Separator).Random());
+            return string.Join("", Resources.Identification.MbiNumeric.Split(Config.Separator)
+                    .Random(),
+                Resources.Identification.MbiAlphabet.Split(Config.Separator)
+                    .Random(),
+                Resources.Identification.Mbi.Split(Config.Separator)
+                    .Random(),
+                Resources.Identification.Numeric.Split(Config.Separator)
+                    .Random(),
+                Resources.Identification.MbiAlphabet.Split(Config.Separator)
+                    .Random(),
+                Resources.Identification.Mbi.Split(Config.Separator)
+                    .Random(),
+                Resources.Identification.Numeric.Split(Config.Separator)
+                    .Random(),
+                Resources.Identification.MbiAlphabet.Split(Config.Separator)
+                    .Random(),
+                Resources.Identification.MbiAlphabet.Split(Config.Separator)
+                    .Random(),
+                Resources.Identification.Numeric.Split(Config.Separator)
+                    .Random(),
+                Resources.Identification.Numeric.Split(Config.Separator)
+                    .Random());
         }
 
         /// <summary>
@@ -73,7 +84,8 @@ namespace Faker
             Even numbers, 02 to 08
             Odd numbers, 11 to 99
             */
-            var groups = Range(1, 9, z => !IsEvenFn(z)).ToList();
+            var groups = Range(1, 9, z => !IsEvenFn(z))
+                .ToList();
             groups.AddRange(Range(10, 98, IsEvenFn));
             groups.AddRange(Range(2, 8, IsEvenFn));
             groups.AddRange(Range(11, 99, z => !IsEvenFn(z)));
@@ -81,7 +93,7 @@ namespace Faker
             var group = groups.ElementAt(RandomNumber.Next(0, groups.Count - 1));
             var serial = RandomNumber.Next(1, 9999);
             var ssn = $"{area:000}-{group:00}-{serial:0000}";
-            return !dashFormat ? ssn.Replace("-","") : ssn;
+            return !dashFormat ? ssn.Replace("-", "") : ssn;
         }
 
         public static DateTime DateOfBirth()
@@ -98,42 +110,56 @@ namespace Faker
             var now = DateTime.UtcNow;
             var randomDay = RandomNumber.Next(1, 365); // Skip leap years for simplicity
             if (yearsToSubtract < 1) randomDay = RandomNumber.Next(1, now.DayOfYear);
-            var gaussianDate = now.AddYears(yearsToSubtract * -1).AddDays(randomDay * -1);
+            var gaussianDate = now.AddYears(yearsToSubtract * -1)
+                .AddDays(randomDay * -1);
             return gaussianDate.Date;
         }
 
         public static string UkNationalInsuranceNumber()
         {
             var niNumber = new StringBuilder();
-            niNumber.Append(Resources.Identification.Alphabet.Split(Config.Separator).Random());
-            niNumber.Append(Resources.Identification.Alphabet.Split(Config.Separator).Random());
+            niNumber.Append(Resources.Identification.Alphabet.Split(Config.Separator)
+                .Random());
+            niNumber.Append(Resources.Identification.Alphabet.Split(Config.Separator)
+                .Random());
 
             for (var i = 0; i < 6; i++)
                 niNumber.Append(RandomNumber.Next(0, 9));
 
-            niNumber.Append(Resources.Identification.Alphabet.Split(Config.Separator).Random());
+            niNumber.Append(Resources.Identification.Alphabet.Split(Config.Separator)
+                .Random());
 
             return niNumber.ToString();
         }
 
         public static string UkPassportNumber()
         {
-            return NineDigitPassportNumber();
+            return NineDigitNumber();
         }
 
         public static string UsPassportNumber()
         {
-            return NineDigitPassportNumber();
+            return NineDigitNumber();
         }
 
-        private static string NineDigitPassportNumber()
+        public static string UkNhsNumber()
         {
-            var passportNumber = new StringBuilder();
+            var nineDigitNumber = NineDigitNumber();
+            var checksum = UkNhsHelper.CalculateCheckSum(nineDigitNumber);
+
+            return
+                $"{nineDigitNumber.Substring(0, 3)} {nineDigitNumber.Substring(3, 3)} {nineDigitNumber.Substring(6, 3)}{checksum}";
+        }
+
+        private static string NineDigitNumber()
+        {
+            var nineDigitNumber = new StringBuilder();
 
             for (var i = 0; i < 9; i++)
-                passportNumber.Append(Resources.Identification.Numeric.Split(Config.Separator).Random());
+                nineDigitNumber.Append(Resources.Identification.Numeric.Split(Config.Separator)
+                    .Random());
 
-            return passportNumber.ToString();
+            return nineDigitNumber.ToString();
         }
 
         /// <summary>
@@ -166,7 +192,8 @@ namespace Faker
 
             //Add year to th PIN 
             //Gets Only the last two digits of the year
-            PIN.Append(yearDigit.ToString().Substring(2, 2));
+            PIN.Append(yearDigit.ToString()
+                .Substring(2, 2));
 
             //Maximum number of days in every month
             var monthsData = new List<KeyValuePair<int, int>>();
@@ -184,7 +211,9 @@ namespace Faker
             monthsData.Add(new KeyValuePair<int, int>(11, 30));
             monthsData.Add(new KeyValuePair<int, int>(12, 31));
             //Get Random day in current month
-            var dayDigit = r.Next(1, monthsData.Where(x => x.Key == monthDigit).Select(y => y.Value).FirstOrDefault());
+            var dayDigit = r.Next(1, monthsData.Where(x => x.Key == monthDigit)
+                .Select(y => y.Value)
+                .FirstOrDefault());
 
             //This is rule for centuries
             if (yearDigit < 1900)
@@ -203,7 +232,8 @@ namespace Faker
             for (var i = 0; i < PIN.Length; i++)
             {
                 var currentDigit = 0;
-                currentDigit = int.Parse(PIN.ToString().Substring(i, 1));
+                currentDigit = int.Parse(PIN.ToString()
+                    .Substring(i, 1));
                 weigthSums += currentDigit * weightNumbers[i];
             }
 

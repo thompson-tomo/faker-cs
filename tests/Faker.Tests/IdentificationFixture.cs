@@ -9,14 +9,15 @@ namespace Faker.Tests
     {
         private static readonly Regex NineDigitRegex = new Regex(@"^[0-9]{9,9}$", RegexOptions.Compiled);
         private static readonly Regex TenDigitRegex = new Regex(@"^[0-9]{10,10}$", RegexOptions.Compiled);
+        private static readonly Regex NhsDigitRegex = new Regex(@"^[0-9]{3} [0-9]{3} [0-9]{4}$", RegexOptions.Compiled);
 
         [Test]
         public void Should_Create_BG_Pin()
         {
-            var passport = Identification.BulgarianPin();
-            Console.WriteLine($@"BGPIN=[{passport}]");
+            var bgPin = Identification.BulgarianPin();
+            Console.WriteLine($@"BgPin=[{bgPin}]");
 
-            Assert.IsTrue(TenDigitRegex.IsMatch(passport));
+            Assert.IsTrue(TenDigitRegex.IsMatch(bgPin));
         }
 
         [Test]
@@ -82,6 +83,15 @@ namespace Faker.Tests
             Console.WriteLine($@"PassportNumber=[{passport}]");
 
             Assert.IsTrue(NineDigitRegex.IsMatch(passport));
+        }
+
+        [Test]
+        public void Should_Create_UK_NhsNumber()
+        {
+            var nhs = Identification.UkNhsNumber();
+            Console.WriteLine($@"NhsNumber=[{nhs}]");
+
+            Assert.IsTrue(NhsDigitRegex.IsMatch(nhs));
         }
     }
 }

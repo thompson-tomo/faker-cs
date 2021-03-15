@@ -69,6 +69,9 @@
     <Compile Include="..\Faker.Tests\FinanceFixture.cs">
       <Link>FinanceFixture.cs</Link>
     </Compile>
+    <Compile Include="..\Faker.Tests\Helpers\UkNhsHelperFixture.cs">
+      <Link>Helpers\UkNhsHelperFixture.cs</Link>
+    </Compile>
     <Compile Include="..\Faker.Tests\IdentificationFixture.cs">
       <Link>IdentificationFixture.cs</Link>
     </Compile>
@@ -98,6 +101,7 @@
       <Name>Faker.Net.4.8</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
