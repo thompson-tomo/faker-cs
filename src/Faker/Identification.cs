@@ -142,13 +142,12 @@ namespace Faker
             return NineDigitNumber();
         }
 
-        public static string UkNhsNumber()
+        public static string UkNhsNumber(bool formatted = false)
         {
             var nineDigitNumber = NineDigitNumber();
             var checksum = UkNhsHelper.CalculateCheckSum(nineDigitNumber);
 
-            return
-                $"{nineDigitNumber.Substring(0, 3)} {nineDigitNumber.Substring(3, 3)} {nineDigitNumber.Substring(6, 3)}{checksum}";
+            return formatted ? $"{nineDigitNumber.Substring(0, 3)} {nineDigitNumber.Substring(3, 3)} {nineDigitNumber.Substring(6, 3)}{checksum}" : $"{nineDigitNumber}{checksum}";
         }
 
         private static string NineDigitNumber()

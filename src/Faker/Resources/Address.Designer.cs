@@ -73,9 +73,10 @@ namespace Faker.Resources {
 		///   Looks up a localized string similar to AB;BC;MB;NB;NL;NS;NT;NU;ON;PE;QC;SK;YT.
 		/// </summary>
 		internal static string CaProvince {
-			get {
-				return ResourceManager.GetString("CaProvince", resourceCulture);
-		}
+            get {
+                return ResourceManager.GetString("CaProvince", resourceCulture);
+            }
+        }
         
         /// <summary>
         ///   Looks up a localized string similar to North;East;West;South;New;Lake;Port.
