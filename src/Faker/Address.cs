@@ -115,5 +115,10 @@ namespace Faker
         {
             return Resources.Address.UkPostCode.Split(Config.Separator).Random().Trim().Numerify().Letterify();
         }
+
+        public static string CaProvince()
+        {
+	        return Resources.Address.CaProvince.Split(Config.Separator).Random().Trim();
+        }
     }
 }
