@@ -17,6 +17,9 @@ namespace Faker
                 result = 11 - result % 11;
             }
 
+            if (result == 11)
+                result = 0;
+
             return result.ToString();
         }
     }
