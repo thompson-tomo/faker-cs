@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -167,5 +167,8 @@
   </data>
   <data name="ZipCode" xml:space="preserve">
     <value>#####;#####-####</value>
+  </data>
+  <data name="CaProvince" xml:space="preserve">
+    <value>AB;BC;MB;NB;NL;NS;NT;NU;ON;PE;QC;SK;YT</value>
   </data>
 </root>
