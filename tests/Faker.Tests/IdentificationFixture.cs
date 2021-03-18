@@ -45,16 +45,16 @@ namespace Faker.Tests
         }
 
         [Test]
-        public void Should_Create_Mbi()
+        public void Should_Create_US_Mbi()
         {
             var mbi = Identification.MedicareBeneficiaryIdentifier();
-            Console.WriteLine($@"MedicareBeneficiaryIdentifier=[{mbi}]");
+            Console.WriteLine($@"US_MedicareBeneficiaryIdentifier=[{mbi}]");
 
             Assert.IsTrue(MbiRegex.IsMatch(mbi));
         }
 
         [Test]
-        public void Should_Create_SSN()
+        public void Should_Create_US_SSN()
         {
             var ssn = new
             {
@@ -62,9 +62,9 @@ namespace Faker.Tests
                 Without = Identification.SocialSecurityNumber(false)
             };
 
-            Console.WriteLine($@"SocialSecurityNumber=[{ssn.WithDashes}]");
+            Console.WriteLine($@"US_SocialSecurityNumber=[{ssn.WithDashes}]");
             Assert.IsTrue(Regex.IsMatch(ssn.WithDashes, @"\d{3}-\d{2}-\d{4}"));
-            Console.WriteLine($@"SocialSecurityNumber=[{ssn.Without}]");
+            Console.WriteLine($@"US_SocialSecurityNumber=[{ssn.Without}]");
             Assert.IsTrue(Regex.IsMatch(ssn.Without, @"\d{9}"));
         }
 
@@ -72,7 +72,7 @@ namespace Faker.Tests
         public void Should_Create_UK_Passport_Number()
         {
             var passport = Identification.UkPassportNumber();
-            Console.WriteLine($@"PassportNumber=[{passport}]");
+            Console.WriteLine($@"UK_PassportNumber=[{passport}]");
 
             Assert.IsTrue(NineDigitRegex.IsMatch(passport));
         }
@@ -83,19 +83,19 @@ namespace Faker.Tests
             for (var i = 0; i < 99; i++)
             {
                 var nin = Identification.UkNationalInsuranceNumber();
-                Console.WriteLine($@"UKNationalInsuranceNumber=[{nin}]");
+                Console.WriteLine($@"Iteration =[{i}], UK_NI_Number=[{nin}]");
 
                 Assert.IsTrue(UkNiNumberRegex.IsMatch(nin));
             }
         }
 
         [Test]
-        public void Should_Create__UK_Formatted_NationalInsurance_Number()
+        public void Should_Create_UK_Formatted_NationalInsurance_Number()
         {
             for (var i = 0; i < 99; i++)
             {
                 var nin = Identification.UkNationalInsuranceNumber(true);
-                Console.WriteLine($@"UKNationalInsuranceNumber=[{nin}]");
+                Console.WriteLine($@"Iteration =[{i}], UK_NI_Number =[{nin}]");
 
                 Assert.IsTrue(UkNiNumberRegex.IsMatch(nin));
             }
@@ -105,7 +105,7 @@ namespace Faker.Tests
         public void Should_Create_US_Passport_Number()
         {
             var passport = Identification.UsPassportNumber();
-            Console.WriteLine($@"PassportNumber=[{passport}]");
+            Console.WriteLine($@"US_Passport_Number=[{passport}]");
 
             Assert.IsTrue(NineDigitRegex.IsMatch(passport));
         }
@@ -116,7 +116,7 @@ namespace Faker.Tests
             for (var i = 0; i < 99; i++)
             {
                 var nhs = Identification.UkNhsNumber(true);
-                Console.WriteLine($@"NhsNumber=[{nhs}]");
+                Console.WriteLine($@"Iteration =[{i}], UK_NHS_Number=[{nhs}]");
 
                 Assert.IsTrue(NhsFormattedDigitRegex.IsMatch(nhs));
             }
@@ -128,7 +128,7 @@ namespace Faker.Tests
             for (var i = 0; i < 99; i++)
             {
                 var nhs = Identification.UkNhsNumber();
-                Console.WriteLine($@"NhsNumber=[{nhs}]");
+                Console.WriteLine($@"Iteration =[{i}], UK_NHS_Number=[{nhs}]");
 
                 Assert.IsTrue(TenDigitRegex.IsMatch(nhs));
             }

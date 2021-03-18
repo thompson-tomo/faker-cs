@@ -13,28 +13,37 @@ namespace Faker.Tests
         [Test]
         public void Should_Get_FullName()
         {
-            var name = Name.FullName();
-            Console.WriteLine($@"Name=[{name}]");
+            for (var i = 0; i < 99; i++)
+            {
+                var name = Name.FullName();
+                Console.WriteLine($@"Iteration=[{i}], Name=[{name}]");
 
-            Assert.IsTrue(FullNamRegex.IsMatch(name));
+                Assert.IsTrue(FullNamRegex.IsMatch(name));
+            }
         }
 
         [Test]
         public void Should_Get_FullName_With_Standard_Format()
         {
-            var name = Name.FullName(NameFormats.Standard);
-            Console.WriteLine($@"Name=[{name}]");
+            for (var i = 0; i < 99; i++)
+            {
+                var name = Name.FullName(NameFormats.Standard);
+                Console.WriteLine($@"Iteration=[{i}], FullName_Standard_Format=[{name}]");
 
-            Assert.IsTrue(Regex.IsMatch(name, @"^\w+\.? \w+\'?\.?$"));
+                Assert.IsTrue(Regex.IsMatch(name, @"^\w+\.? \w+\'?\.?$"));
+            }
         }
 
         [Test]
         public void Should_Get_FullName_With_Standard_With_Middle_Format()
         {
-            var name = Name.FullName(NameFormats.StandardWithMiddle);
-            Console.WriteLine($@"Name=[{name}]");
+            for (var i = 0; i < 99; i++)
+            {
+                var name = Name.FullName(NameFormats.StandardWithMiddle);
+                Console.WriteLine($@"Iteration=[{i}], FullName_Middle_Format=[{name}]");
 
-            Assert.IsTrue(Regex.IsMatch(name, @"^\w+\.? \w+\.? \w+\'?\.?$"));
+                Assert.IsTrue(Regex.IsMatch(name, @"^\w+\.? \w+\.? \w+\'?\.?$"));
+            }
         }
 
         [Test]
@@ -58,11 +67,14 @@ namespace Faker.Tests
         [Test]
         public void Validate_FullName_Regular_Expressions()
         {
-            var firstNames = Resources.Name.First.Split(Config.Separator).ToArray();
-            var lastNames = Resources.Name.Last.Split(Config.Separator).ToArray();
+            var firstNames = Resources.Name.First.Split(Config.Separator)
+                .ToArray();
+            var lastNames = Resources.Name.Last.Split(Config.Separator)
+                .ToArray();
 
             var fullNames = firstNames.SelectMany(firstName => lastNames,
-                (firstName, lastName) => $"{firstName.Trim()} {lastName.Trim()}").ToArray();
+                    (firstName, lastName) => $"{firstName.Trim()} {lastName.Trim()}")
+                .ToArray();
 
             foreach (var fullName in fullNames)
             {
