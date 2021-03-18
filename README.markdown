@@ -27,19 +27,28 @@ Get the code via git:
     git clone git://github.com/slashdotdash/faker-cs.git
 
 Example code 
-```csharp
+```CSharp
 var name = Faker.Name.FullName(); // Tod Yundt
 var firstName = Faker.Name.First(); // Orlando
 var lastName = Faker.Name.Last(); // Brekke
 var address = Faker.Address.StreetAddress(); // 713 Pfeffer Bridge
 var city = Faker.Address.City(); // Reynaton
 var number = Faker.RandomNumber.Next(100); // 30
+var dob = Faker.Identification.DateOfBirth(); // 1971-11-16T00:00:00.0000000Z
+
+// US - United States
 var ssn = Faker.Identification.SocialSecurityNumber(); // 249-17-9666
 var mbi = Faker.Identification.MedicareBeneficiaryIdentifier(); // 8NK0Q74KT53
-var nin = Faker.Identification.UkNationalInsuranceNumber(); // YA171053Y
-var dob = Faker.Identification.DateOfBirth(); // 1971-11-16T00:00:00.0000000Z
-var ukPassport = Faker.Identification.UkPassport(); // 496675685
 var usPassport = Faker.Identification.UsPassport(); // 335587506
+
+// UK - United Kingdom
+var nin = Faker.Identification.UkNationalInsuranceNumber(); // YA171053Y
+var ninFormatted = Faker.Identification.UkNationalInsuranceNumber(true); // YA 17 10 53 Y
+var ukPassport = Faker.Identification.UkPassport(); // 496675685
+var ukNhs = Faker.Identification.NhsNumber(); // 6584168301
+var ukNhsFormatted = Faker.Identification.NhsNumber(true); // 658 416 8301
+
+// BG - Bulgaria
 var bulgarianPin = Faker.Identification.BulgarianPin(); //6402142606
 
 ```
