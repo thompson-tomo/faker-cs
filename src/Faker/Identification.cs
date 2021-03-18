@@ -115,21 +115,27 @@ namespace Faker
             return gaussianDate.Date;
         }
 
-        public static string UkNationalInsuranceNumber()
+        public static string UkNationalInsuranceNumber(bool formatted = false)
         {
-            var niNumber = new StringBuilder();
-            niNumber.Append(Resources.Identification.Alphabet.Split(Config.Separator)
-                .Random());
-            niNumber.Append(Resources.Identification.Alphabet.Split(Config.Separator)
-                .Random());
+            var notAllowedPrefixes = Resources.Identification.UkNationalInsuranceNotAllowedPrefix
+                .Split(Config.Separator)
+                .ToArray();
 
+            string prefix;
+            while (true)
+            {
+                prefix = $"{Resources.Identification.UkNationalInsuranceFirstDigit.Split(Config.Separator).Random()}{Resources.Identification.UkNationalInsuranceSecondDigit.Split(Config.Separator).Random()}";
+
+                if (!notAllowedPrefixes.Contains(prefix))
+                    break;
+            }
+
+            var number = string.Empty;
             for (var i = 0; i < 6; i++)
-                niNumber.Append(RandomNumber.Next(0, 9));
+                number += RandomNumber.Next(0, 9);
 
-            niNumber.Append(Resources.Identification.Alphabet.Split(Config.Separator)
-                .Random());
-
-            return niNumber.ToString();
+            var suffix = $"{Resources.Identification.UkNationalInsuranceSuffix.Split(Config.Separator).Random()}";
+            return formatted ? $"{prefix} {number.Substring(0,2)} {number.Substring(2, 2)} {number.Substring(4, 2)} {suffix}" : $"{prefix}{number}{suffix}";
         }
 
         public static string UkPassportNumber()
@@ -144,8 +150,15 @@ namespace Faker
 
         public static string UkNhsNumber(bool formatted = false)
         {
-            var nineDigitNumber = NineDigitNumber();
-            var checksum = UkNhsHelper.CalculateCheckSum(nineDigitNumber);
+            string nineDigitNumber;
+            string checksum;
+            while (true)
+            {
+                nineDigitNumber = NineDigitNumber();
+                checksum = UkHelper.CalculateNhsNumberChecksum(nineDigitNumber);
+                if (checksum != "10")
+                    break;
+            }
 
             return formatted ? $"{nineDigitNumber.Substring(0, 3)} {nineDigitNumber.Substring(3, 3)} {nineDigitNumber.Substring(6, 3)}{checksum}" : $"{nineDigitNumber}{checksum}";
         }

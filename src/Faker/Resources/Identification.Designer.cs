@@ -82,5 +82,25 @@ namespace Faker.Resources {
         {
             get { return ResourceManager.GetString("Mbi", resourceCulture); }
         }
+
+        internal static string UkNationalInsuranceFirstDigit
+        {
+            get { return ResourceManager.GetString("UkNationalInsuranceFirstDigit", resourceCulture); }
+        }
+
+        internal static string UkNationalInsuranceSecondDigit
+        {
+            get { return ResourceManager.GetString("UkNationalInsuranceSecondDigit", resourceCulture); }
+        }
+
+        internal static string UkNationalInsuranceNotAllowedPrefix
+        {
+            get { return ResourceManager.GetString("UkNationalInsuranceNotAllowedPrefix", resourceCulture); }
+        }
+
+        internal static string UkNationalInsuranceSuffix
+        {
+            get { return ResourceManager.GetString("UkNationalInsuranceSuffix", resourceCulture); }
+        }
     }
 }

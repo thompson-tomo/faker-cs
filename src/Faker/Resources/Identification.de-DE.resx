@@ -135,4 +135,16 @@
   <data name="Numeric" xml:space="preserve">
     <value>0;1;2;3;4;5;6;7;8;9</value>
   </data>
+  <data name="UkNationalInsuranceFirstDigit" xml:space="preserve">
+    <value>A;B;C;E;G;H;J;K;L;M;N;O;P;R;S;T;W;X;Z;Y</value>
+  </data>
+  <data name="UkNationalInsuranceNotAllowedPrefix" xml:space="preserve">
+    <value>BG;GB;NK;KN;TN;NT;ZZ</value>
+  </data>
+  <data name="UkNationalInsuranceSecondDigit" xml:space="preserve">
+    <value>A;B;C;E;G;H;J;K;L;M;N;P;R;S;T;W;X;Z;Y</value>
+  </data>
+  <data name="UkNationalInsuranceSuffix" xml:space="preserve">
+    <value>A;B;C;D;F;M;P</value>
+  </data>
 </root>

@@ -71,8 +71,8 @@
     <Compile Include="..\Faker\Finance.cs">
       <Link>Finance.cs</Link>
     </Compile>
-    <Compile Include="..\Faker\Helpers\UkNhsHelper.cs">
-      <Link>Helpers\UkNhsHelper.cs</Link>
+    <Compile Include="..\Faker\Helpers\UkHelper.cs">
+      <Link>Helpers\UkHelper.cs</Link>
     </Compile>
     <Compile Include="..\Faker\Identification.cs">
       <Link>Identification.cs</Link>

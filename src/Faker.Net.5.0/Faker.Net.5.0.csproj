@@ -23,7 +23,7 @@
     <Compile Include="..\Faker\Extensions\EnumerableExtensions.cs" Link="Extensions\EnumerableExtensions.cs" />
     <Compile Include="..\Faker\Extensions\StringExtensions.cs" Link="Extensions\StringExtensions.cs" />
     <Compile Include="..\Faker\Finance.cs" Link="Finance.cs" />
-    <Compile Include="..\Faker\Helpers\UkNhsHelper.cs" Link="Helpers\UkNhsHelper.cs" />
+    <Compile Include="..\Faker\Helpers\UkHelper.cs" Link="Helpers\UkHelper.cs" />
     <Compile Include="..\Faker\Identification.cs" Link="Identification.cs" />
     <Compile Include="..\Faker\Internet.cs" Link="Internet.cs" />
     <Compile Include="..\Faker\Lorem.cs" Link="Lorem.cs" />
