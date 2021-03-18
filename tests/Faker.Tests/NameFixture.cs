@@ -8,7 +8,24 @@ namespace Faker.Tests
     [TestFixture]
     public class NameFixture
     {
-        private static readonly Regex FullNamRegex = new Regex(@"(\w+\.?\'? ?){2,3}$", RegexOptions.Compiled);
+        [OneTimeSetUp]
+        public static void SetUp()
+        {
+            var prefixes = string.Join("|", Resources.Name.Prefix.Split(Config.Separator)
+                .Select(x => $"(({x} )?)"));
+
+            var suffixes = string.Join("|", Resources.Name.Suffix.Split(Config.Separator)
+                .Select(x => $"(( {x})?)"));
+
+            var fullNameRegExString = $@"({prefixes})(\w+?) (\w+\'?)(\w+?\-?\w+)({suffixes})";
+            var fullNameWithMiddleRegExString = $@"({prefixes})(\w+?) (\w+\'?) (\w+\'?)(\w+?\-?\w+)({suffixes})";
+
+            _fullNameRegex = new Regex(fullNameRegExString, RegexOptions.Compiled);
+            _fullNameWithMiddleRegex = new Regex(fullNameWithMiddleRegExString, RegexOptions.Compiled);
+        }
+
+        private static Regex _fullNameRegex;
+        private static Regex _fullNameWithMiddleRegex;
 
         [Test]
         public void Should_Get_FullName()
@@ -18,7 +35,7 @@ namespace Faker.Tests
                 var name = Name.FullName();
                 Console.WriteLine($@"Iteration=[{i}], Name=[{name}]");
 
-                Assert.IsTrue(FullNamRegex.IsMatch(name));
+                Assert.IsTrue(_fullNameRegex.IsMatch(name));
             }
         }
 
@@ -30,7 +47,7 @@ namespace Faker.Tests
                 var name = Name.FullName(NameFormats.Standard);
                 Console.WriteLine($@"Iteration=[{i}], FullName_Standard_Format=[{name}]");
 
-                Assert.IsTrue(Regex.IsMatch(name, @"^\w+\.? \w+\'?\.?$"));
+                Assert.IsTrue(_fullNameRegex.IsMatch(name));
             }
         }
 
@@ -42,7 +59,19 @@ namespace Faker.Tests
                 var name = Name.FullName(NameFormats.StandardWithMiddle);
                 Console.WriteLine($@"Iteration=[{i}], FullName_Middle_Format=[{name}]");
 
-                Assert.IsTrue(Regex.IsMatch(name, @"^\w+\.? \w+\.? \w+\'?\.?$"));
+                Assert.IsTrue(_fullNameWithMiddleRegex.IsMatch(name));
+            }
+        }
+
+        [Test]
+        public void Should_Get_FullName_With_Standard_With_Middle_Format_And_Prefix()
+        {
+            for (var i = 0; i < 99; i++)
+            {
+                var name = Name.FullName(NameFormats.StandardWithMiddleWithPrefix);
+                Console.WriteLine($@"Iteration=[{i}], FullName_Middle_Format=[{name}]");
+
+                Assert.IsTrue(_fullNameWithMiddleRegex.IsMatch(name));
             }
         }
 
@@ -78,7 +107,7 @@ namespace Faker.Tests
 
             foreach (var fullName in fullNames)
             {
-                var match = FullNamRegex.IsMatch(fullName);
+                var match = _fullNameRegex.IsMatch(fullName);
                 if (!match)
                     Console.WriteLine($@"Name=[{fullName}]");
 
