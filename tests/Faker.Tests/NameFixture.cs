@@ -17,8 +17,8 @@ namespace Faker.Tests
             var suffixes = string.Join("|", Resources.Name.Suffix.Split(Config.Separator)
                 .Select(x => $"(( {x})?)"));
 
-            var fullNameRegExString = $@"({prefixes})(\w+?) (\w+\'?)(\w+?\-?\w+)({suffixes})";
-            var fullNameWithMiddleRegExString = $@"({prefixes})(\w+?) (\w+\'?) (\w+\'?)(\w+?\-?\w+)({suffixes})";
+            var fullNameRegExString = $@"({prefixes})(\w+?) (\w\'?)(\w+?\-?\w+)({suffixes})";
+            var fullNameWithMiddleRegExString = $@"({prefixes})(\w+?) (\w\'?)(\w+\'?) (\w\'?)(\w+?\-?\w+)({suffixes})";
 
             _fullNameRegex = new Regex(fullNameRegExString, RegexOptions.Compiled);
             _fullNameWithMiddleRegex = new Regex(fullNameWithMiddleRegExString, RegexOptions.Compiled);
@@ -30,7 +30,7 @@ namespace Faker.Tests
         [Test]
         public void Should_Get_FullName()
         {
-            for (var i = 0; i < 99; i++)
+            for (var i = 0; i < 999; i++)
             {
                 var name = Name.FullName();
                 Console.WriteLine($@"Iteration=[{i}], Name=[{name}]");
