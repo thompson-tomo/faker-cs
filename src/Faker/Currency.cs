@@ -1,4 +1,5 @@
-﻿using Faker.Extensions;
+﻿using System.Linq;
+using Faker.Extensions;
 
 namespace Faker
 {
