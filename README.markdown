@@ -40,18 +40,17 @@ var dob = Faker.Identification.DateOfBirth(); // 1971-11-16T00:00:00.0000000Z
 // US - United States
 var ssn = Faker.Identification.SocialSecurityNumber(); // 249-17-9666
 var mbi = Faker.Identification.MedicareBeneficiaryIdentifier(); // 8NK0Q74KT53
-var usPassport = Faker.Identification.UsPassport(); // 335587506
+var usPassport = Faker.Identification.UsPassportNumber(); // 335587506
 
 // UK - United Kingdom
 var nin = Faker.Identification.UkNationalInsuranceNumber(); // YA171053Y
 var ninFormatted = Faker.Identification.UkNationalInsuranceNumber(true); // YA 17 10 53 Y
-var ukPassport = Faker.Identification.UkPassport(); // 496675685
-var ukNhs = Faker.Identification.NhsNumber(); // 6584168301
-var ukNhsFormatted = Faker.Identification.NhsNumber(true); // 658 416 8301
+var ukPassport = Faker.Identification.UkPassportNumber(); // 496675685
+var ukNhs = Faker.Identification.UkNhsNumber(); // 6584168301
+var ukNhsFormatted = Faker.Identification.UkNhsNumber(true); // 658 416 8301
 
 // BG - Bulgaria
 var bulgarianPin = Faker.Identification.BulgarianPin(); //6402142606
-
 ```
 
 Supported versions:
