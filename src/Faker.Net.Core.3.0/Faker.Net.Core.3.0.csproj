@@ -67,7 +67,6 @@
   <ItemGroup>
     <Folder Include="Extensions\" />
     <Folder Include="Helpers\" />
-    <Folder Include="Resources\" />
   </ItemGroup>
 
 </Project>
