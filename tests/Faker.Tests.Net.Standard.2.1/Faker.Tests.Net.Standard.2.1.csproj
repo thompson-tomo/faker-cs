@@ -1,10 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <RootNamespace>Faker.Tests</RootNamespace>
-    <LangVersion>8.0</LangVersion>
-    <AssemblyName>Faker.Tests.Net.5.0</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
@@ -32,16 +30,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.10.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4" />
     <PackageReference Include="NUnit" Version="3.13.2" />
-    <PackageReference Include="NUnit3TestAdapter" Version="4.0.0">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Faker.Net.5.0\Faker.Net.5.0.csproj" />
+    <ProjectReference Include="..\..\src\Faker.Net.Standard.2.1\Faker.Net.Standard.2.1.csproj" />
   </ItemGroup>
-
+  
 </Project>

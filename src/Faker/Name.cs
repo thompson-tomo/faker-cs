@@ -5,6 +5,7 @@ using System.Runtime.CompilerServices;
 using Faker.Extensions;
 
 [assembly: InternalsVisibleTo("Faker.Tests.Net.5.0")]
+[assembly: InternalsVisibleTo("Faker.Tests.Net.Standard.2.1")]
 
 namespace Faker
 {
