@@ -13,10 +13,12 @@
 
   <ItemGroup>
     <Compile Include="..\Faker\Address.cs" Link="Address.cs" />
+    <Compile Include="..\Faker\Boolean.cs" Link="Boolean.cs" />
     <Compile Include="..\Faker\Company.cs" Link="Company.cs" />
     <Compile Include="..\Faker\Config.cs" Link="Config.cs" />
     <Compile Include="..\Faker\Country.cs" Link="Country.cs" />
     <Compile Include="..\Faker\Currency.cs" Link="Currency.cs" />
+    <Compile Include="..\Faker\Enum.cs" Link="Enum.cs" />
     <Compile Include="..\Faker\Extensions\ArrayExtensions.cs" Link="Extensions\ArrayExtensions.cs" />
     <Compile Include="..\Faker\Extensions\EnumerableExtensions.cs" Link="Extensions\EnumerableExtensions.cs" />
     <Compile Include="..\Faker\Extensions\StringExtensions.cs" Link="Extensions\StringExtensions.cs" />
@@ -40,56 +42,29 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Extensions\" />
-    <Folder Include="Extensions\" />
-    <Folder Include="Helpers\" />
-    <Folder Include="Resources\" />
-    <Folder Include="Resources\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="..\Faker\Resources\Address.de-DE.resx" Link="Resources\Address.de-DE.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Faker\Resources\Address.resx" Link="Resources\Address.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Faker\Resources\Company.de-DE.resx" Link="Resources\Company.de-DE.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Faker\Resources\Company.resx" Link="Resources\Company.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
+    <EmbeddedResource Include="..\Faker\Resources\Address.de-DE.resx" Link="Resources\Address.de-DE.resx" />
+    <EmbeddedResource Include="..\Faker\Resources\Address.resx" Link="Resources\Address.resx" />
+    <EmbeddedResource Include="..\Faker\Resources\Company.de-DE.resx" Link="Resources\Company.de-DE.resx" />
+    <EmbeddedResource Include="..\Faker\Resources\Company.resx" Link="Resources\Company.resx" />
     <EmbeddedResource Include="..\Faker\Resources\Country.de-DE.resx" Link="Resources\Country.de-DE.resx" />
     <EmbeddedResource Include="..\Faker\Resources\Country.resx" Link="Resources\Country.resx" />
     <EmbeddedResource Include="..\Faker\Resources\Currency.de-DE.resx" Link="Resources\Currency.de-DE.resx" />
     <EmbeddedResource Include="..\Faker\Resources\Currency.resx" Link="Resources\Currency.resx" />
     <EmbeddedResource Include="..\Faker\Resources\Identification.de-DE.resx" Link="Resources\Identification.de-DE.resx" />
     <EmbeddedResource Include="..\Faker\Resources\Identification.resx" Link="Resources\Identification.resx" />
-    <EmbeddedResource Include="..\Faker\Resources\Internet.de-DE.resx" Link="Resources\Internet.de-DE.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Faker\Resources\Internet.resx" Link="Resources\Internet.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Faker\Resources\Lorem.de-DE.resx" Link="Resources\Lorem.de-DE.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Faker\Resources\Lorem.resx" Link="Resources\Lorem.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Faker\Resources\Name.de-DE.resx" Link="Resources\Name.de-DE.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Faker\Resources\Name.resx" Link="Resources\Name.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Faker\Resources\Phone.de-DE.resx" Link="Resources\Phone.de-DE.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Faker\Resources\Phone.resx" Link="Resources\Phone.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
+    <EmbeddedResource Include="..\Faker\Resources\Internet.de-DE.resx" Link="Resources\Internet.de-DE.resx" />
+    <EmbeddedResource Include="..\Faker\Resources\Internet.resx" Link="Resources\Internet.resx" />
+    <EmbeddedResource Include="..\Faker\Resources\Lorem.de-DE.resx" Link="Resources\Lorem.de-DE.resx" />
+    <EmbeddedResource Include="..\Faker\Resources\Lorem.resx" Link="Resources\Lorem.resx" />
+    <EmbeddedResource Include="..\Faker\Resources\Name.de-DE.resx" Link="Resources\Name.de-DE.resx" />
+    <EmbeddedResource Include="..\Faker\Resources\Name.resx" Link="Resources\Name.resx" />
+    <EmbeddedResource Include="..\Faker\Resources\Phone.de-DE.resx" Link="Resources\Phone.de-DE.resx" />
+    <EmbeddedResource Include="..\Faker\Resources\Phone.resx" Link="Resources\Phone.resx" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Extensions\" />
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+  
 </Project>
