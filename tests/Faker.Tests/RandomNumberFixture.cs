@@ -15,7 +15,8 @@ namespace Faker.Tests
         {
             var maxExclusiveLimit = maxValue + 1;
             Console.WriteLine($@"RandomNumber.Next [{testName}]");
-            var results = Enumerable.Range(0, maxExclusiveLimit).ToDictionary(k => k, k => false);
+            var results = Enumerable.Range(0, maxExclusiveLimit)
+                .ToDictionary(k => k, k => false);
             do
             {
                 var randValue = RandomNumber.Next(0, maxExclusiveLimit);
@@ -23,7 +24,8 @@ namespace Faker.Tests
                 Console.WriteLine($@"RandomNumber.Next(0,{maxExclusiveLimit})=[{randValue}]");
             } while (!results.All(j => j.Value));
 
-            Assert.IsTrue(results.Select(z => z.Value).All(y => y));
+            Assert.IsTrue(results.Select(z => z.Value)
+                .All(y => y));
         }
 
         [Test]

@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Faker.Extensions;
+﻿using Faker.Extensions;
 
 namespace Faker
 {
@@ -7,12 +6,14 @@ namespace Faker
     {
         public static string ThreeLetterCode()
         {
-            return Resources.Currency.Iso3LetterCodes.Split(Config.Separator).Random();
+            return Resources.Currency.Iso3LetterCodes.Split(Config.Separator)
+                .Random();
         }
 
         public static string Name()
         {
-            return Resources.Currency.Names.Split(Config.Separator).Random();
+            return Resources.Currency.Names.Split(Config.Separator)
+                .Random();
         }
     }
 }

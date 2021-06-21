@@ -25,14 +25,16 @@ namespace Faker
             var length = RandomNumber.Next(2, 4);
 
             return new string(Enumerable.Repeat(TickerCharacters, length)
-                .Select(s => s[RandomNumber.Next(s.Length - 1)]).ToArray());
+                .Select(s => s[RandomNumber.Next(s.Length - 1)])
+                .ToArray());
         }
 
         public static DateTime Maturity(int minimumMaturityInMonths = 6, int maximumMaturityInMonths = 180)
         {
             var months = RandomNumber.Next(minimumMaturityInMonths, maximumMaturityInMonths);
             var days = RandomNumber.Next(1, 28);
-            var date = DateTime.Now.Date.AddMonths(months).AddDays(days);
+            var date = DateTime.Now.Date.AddMonths(months)
+                .AddDays(days);
 
             return date;
         }
@@ -48,7 +50,8 @@ namespace Faker
         private static string SecurityIdentifier()
         {
             return new string(Enumerable.Repeat(SecurityCharacters, 9)
-                .Select(s => s[RandomNumber.Next(s.Length - 1)]).ToArray());
+                .Select(s => s[RandomNumber.Next(s.Length - 1)])
+                .ToArray());
         }
 
         private static int CalculateChecksum(IEnumerable<char> codeWithoutChecksum, bool reverseLuhn = false,
@@ -56,13 +59,16 @@ namespace Faker
         {
             return reverseLuhn
                 ? codeWithoutChecksum
-                    .Select((c, i) => c.OrdinalPosition(allowSymbols).ConditionalMultiplyByTwo(i.IsOdd()).SumDigits())
+                    .Select((c, i) => c.OrdinalPosition(allowSymbols)
+                        .ConditionalMultiplyByTwo(i.IsOdd())
+                        .SumDigits())
                     .Sum()
                     .TensComplement()
                 : codeWithoutChecksum
                     .ToArray()
                     .ToDigits(allowSymbols)
-                    .Select((d, i) => d.ConditionalMultiplyByTwo(i.IsEven()).SumDigits())
+                    .Select((d, i) => d.ConditionalMultiplyByTwo(i.IsEven())
+                        .SumDigits())
                     .Sum()
                     .TensComplement();
         }
@@ -115,7 +121,8 @@ namespace Faker
             var digits = new List<int>();
             for (var i = s.Length - 1; i >= 0; i--)
             {
-                var ordinalPosition = s[i].OrdinalPosition(allowSymbols);
+                var ordinalPosition = s[i]
+                    .OrdinalPosition(allowSymbols);
                 digits.Add(ordinalPosition % 10);
                 if (ordinalPosition > 9)
                     digits.Add(ordinalPosition / 10);
@@ -143,7 +150,8 @@ namespace Faker
         {
             public static string BondName()
             {
-                return BondClass().ToString();
+                return BondClass()
+                    .ToString();
             }
 
             public static Bond BondClass()

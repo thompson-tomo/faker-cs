@@ -124,7 +124,8 @@ namespace Faker
             string prefix;
             while (true)
             {
-                prefix = $"{Resources.Identification.UkNationalInsuranceFirstDigit.Split(Config.Separator).Random()}{Resources.Identification.UkNationalInsuranceSecondDigit.Split(Config.Separator).Random()}";
+                prefix =
+                    $"{Resources.Identification.UkNationalInsuranceFirstDigit.Split(Config.Separator).Random()}{Resources.Identification.UkNationalInsuranceSecondDigit.Split(Config.Separator).Random()}";
 
                 if (!notAllowedPrefixes.Contains(prefix))
                     break;
@@ -135,7 +136,9 @@ namespace Faker
                 number += RandomNumber.Next(0, 9);
 
             var suffix = $"{Resources.Identification.UkNationalInsuranceSuffix.Split(Config.Separator).Random()}";
-            return formatted ? $"{prefix} {number.Substring(0,2)} {number.Substring(2, 2)} {number.Substring(4, 2)} {suffix}" : $"{prefix}{number}{suffix}";
+            return formatted
+                ? $"{prefix} {number.Substring(0, 2)} {number.Substring(2, 2)} {number.Substring(4, 2)} {suffix}"
+                : $"{prefix}{number}{suffix}";
         }
 
         public static string UkPassportNumber()
@@ -160,7 +163,9 @@ namespace Faker
                     break;
             }
 
-            return formatted ? $"{nineDigitNumber.Substring(0, 3)} {nineDigitNumber.Substring(3, 3)} {nineDigitNumber.Substring(6, 3)}{checksum}" : $"{nineDigitNumber}{checksum}";
+            return formatted
+                ? $"{nineDigitNumber.Substring(0, 3)} {nineDigitNumber.Substring(3, 3)} {nineDigitNumber.Substring(6, 3)}{checksum}"
+                : $"{nineDigitNumber}{checksum}";
         }
 
         private static string NineDigitNumber()

@@ -11,12 +11,14 @@ namespace Faker
         {
             if (count <= 0) throw new ArgumentException(@"Count must be greater than zero", nameof(count));
 
-            return count.Times(x => Resources.Lorem.Words.Split(Config.Separator).Random());
+            return count.Times(x => Resources.Lorem.Words.Split(Config.Separator)
+                .Random());
         }
 
         public static string GetFirstWord()
         {
-            return Resources.Lorem.Words.Split(Config.Separator).First();
+            return Resources.Lorem.Words.Split(Config.Separator)
+                .First();
         }
 
         public static string Sentence(int minWordCount)
@@ -24,7 +26,9 @@ namespace Faker
             if (minWordCount <= 0)
                 throw new ArgumentException(@"Count must be greater than zero", nameof(minWordCount));
 
-            return string.Join(" ", Words(minWordCount + RandomNumber.Next(6)).ToArray()).Capitalise() + ".";
+            return string.Join(" ", Words(minWordCount + RandomNumber.Next(6))
+                    .ToArray())
+                .Capitalise() + ".";
         }
 
         public static string Sentence()
@@ -45,7 +49,8 @@ namespace Faker
             if (minSentenceCount <= 0)
                 throw new ArgumentException(@"Count must be greater than zero", nameof(minSentenceCount));
 
-            return string.Join(" ", Sentences(minSentenceCount + RandomNumber.Next(3)).ToArray());
+            return string.Join(" ", Sentences(minSentenceCount + RandomNumber.Next(3))
+                .ToArray());
         }
 
         public static string Paragraph()

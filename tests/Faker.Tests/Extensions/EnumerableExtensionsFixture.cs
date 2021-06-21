@@ -3,7 +3,7 @@ using Faker.Extensions;
 using NUnit.Framework;
 
 namespace Faker.Tests.Extensions
-{  
+{
     [TestFixture]
     public class EnumerableExtensionsFixture
     {

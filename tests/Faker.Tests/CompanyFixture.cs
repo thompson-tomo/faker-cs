@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using NUnit.Framework;
 using System.Text.RegularExpressions;
+using NUnit.Framework;
 
 namespace Faker.Tests
 {
@@ -17,11 +17,11 @@ namespace Faker.Tests
 
             // Name should match one of the given formats
             Assert.IsTrue(new List<Func<bool>>
-                              {
-                                  () => Regex.IsMatch(name, @"\w+ \w+"),
-                                  () => Regex.IsMatch(name, @"\w+-\w+"),
-                                  () => Regex.IsMatch(name, @"\w+, \w+ and \w+")
-                              }.Any(x => x.Invoke()));
+            {
+                () => Regex.IsMatch(name, @"\w+ \w+"),
+                () => Regex.IsMatch(name, @"\w+-\w+"),
+                () => Regex.IsMatch(name, @"\w+, \w+ and \w+")
+            }.Any(x => x.Invoke()));
         }
 
         [Test]

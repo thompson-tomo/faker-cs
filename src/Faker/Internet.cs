@@ -10,7 +10,9 @@ namespace Faker
     {
         private static readonly IEnumerable<Func<string>> UserNameFormats = new List<Func<string>>
         {
-            () => Name.First().AlphanumericOnly().ToLowerInvariant(),
+            () => Name.First()
+                .AlphanumericOnly()
+                .ToLowerInvariant(),
             () => $"{Name.First().AlphanumericOnly()}{new[] {".", "_"}.Random()}{Name.Last().AlphanumericOnly()}"
                 .ToLowerInvariant()
         };
@@ -48,28 +50,39 @@ namespace Faker
 
         public static string Url()
         {
-            var subDomain = Resources.Internet.SubDomain.Split(Config.Separator).Random();
-            var page = Resources.Internet.Page.Split(Config.Separator).Random();
-            var pageSuffix = Resources.Internet.PageSuffix.Split(Config.Separator).Random();
+            var subDomain = Resources.Internet.SubDomain.Split(Config.Separator)
+                .Random();
+            var page = Resources.Internet.Page.Split(Config.Separator)
+                .Random();
+            var pageSuffix = Resources.Internet.PageSuffix.Split(Config.Separator)
+                .Random();
             return $"http://www.{DomainName()}/{subDomain}/{page}.{pageSuffix}";
         }
 
         public static string SecureUrl()
         {
-            var subDomain = Resources.Internet.SubDomain.Split(Config.Separator).Random();
-            var page = Resources.Internet.Page.Split(Config.Separator).Random();
-            var pageSuffix = Resources.Internet.PageSuffix.Split(Config.Separator).Random();
+            var subDomain = Resources.Internet.SubDomain.Split(Config.Separator)
+                .Random();
+            var page = Resources.Internet.Page.Split(Config.Separator)
+                .Random();
+            var pageSuffix = Resources.Internet.PageSuffix.Split(Config.Separator)
+                .Random();
             return $"https://www.{DomainName()}/{subDomain}/{page}.{pageSuffix}";
         }
 
         public static string DomainWord()
         {
-            return Company.Name().Split(' ').First().AlphanumericOnly().ToLowerInvariant();
+            return Company.Name()
+                .Split(' ')
+                .First()
+                .AlphanumericOnly()
+                .ToLowerInvariant();
         }
 
         public static string DomainSuffix()
         {
-            return Resources.Internet.DomainSuffix.Split(Config.Separator).Random();
+            return Resources.Internet.DomainSuffix.Split(Config.Separator)
+                .Random();
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System.Linq;
+using System.Text.RegularExpressions;
 using Faker.Extensions;
 using NUnit.Framework;
-using System.Text.RegularExpressions;
 
 namespace Faker.Tests.Extensions
 {
@@ -21,7 +21,8 @@ namespace Faker.Tests.Extensions
         {
             var number = "##########".Numerify();
             Assert.IsTrue(Regex.IsMatch(number, "^[0-9]+$"));
-            Assert.IsTrue(number.Distinct().Count() > 1);
+            Assert.IsTrue(number.Distinct()
+                .Count() > 1);
             Assert.AreEqual(10, number.Length);
         }
 
@@ -38,14 +39,16 @@ namespace Faker.Tests.Extensions
         {
             var word = "??????????".Letterify();
             Assert.IsTrue(Regex.IsMatch(word, "^[a-z]+$"));
-            Assert.IsTrue(word.Distinct().Count() > 1);
+            Assert.IsTrue(word.Distinct()
+                .Count() > 1);
             Assert.AreEqual(10, word.Length);
         }
 
         [Test]
         public void Should_Replace_Both_Hash_And_Question_Marks()
         {
-            var word = "#?#?".Letterify().Numerify();
+            var word = "#?#?".Letterify()
+                .Numerify();
             Assert.IsTrue(Regex.IsMatch(word, "^[0-9][a-z][0-9][a-z]$"));
             Assert.AreEqual(4, word.Length);
         }

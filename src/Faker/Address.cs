@@ -22,57 +22,75 @@ namespace Faker
 
         private static readonly IEnumerable<Func<string>> StreetAddressFormats = new List<Func<string>>
         {
-            () => string.Format(Resources.Address.AddressFormat.Split(Config.Separator).Random().Trim(), StreetName())
+            () => string.Format(Resources.Address.AddressFormat.Split(Config.Separator)
+                .Random()
+                .Trim(), StreetName())
         };
 
         public static string Country()
         {
-            return Resources.Address.Country.Split(Config.Separator).Random().Trim();
+            return Resources.Address.Country.Split(Config.Separator)
+                .Random()
+                .Trim();
         }
 
         public static string ZipCode()
         {
-            return Resources.Address.ZipCode.Split(Config.Separator).Random().Trim().Numerify();
+            return Resources.Address.ZipCode.Split(Config.Separator)
+                .Random()
+                .Trim()
+                .Numerify();
         }
 
         public static string UsMilitaryState()
         {
-            return Resources.Address.UsMilitaryState.Split(Config.Separator).Random().Trim();
+            return Resources.Address.UsMilitaryState.Split(Config.Separator)
+                .Random()
+                .Trim();
         }
 
         public static string UsMilitaryStateAbbr()
         {
-            return Resources.Address.UsMilitaryStateAbbr.Split(Config.Separator).Random();
+            return Resources.Address.UsMilitaryStateAbbr.Split(Config.Separator)
+                .Random();
         }
 
         public static string UsTerritory()
         {
-            return Resources.Address.UsTerritory.Split(Config.Separator).Random().Trim();
+            return Resources.Address.UsTerritory.Split(Config.Separator)
+                .Random()
+                .Trim();
         }
 
         public static string UsTerritoryStateAbbr()
         {
-            return Resources.Address.UsTerritoryAbbr.Split(Config.Separator).Random();
+            return Resources.Address.UsTerritoryAbbr.Split(Config.Separator)
+                .Random();
         }
 
         public static string UsState()
         {
-            return Resources.Address.UsState.Split(Config.Separator).Random().Trim();
+            return Resources.Address.UsState.Split(Config.Separator)
+                .Random()
+                .Trim();
         }
 
         public static string UsStateAbbr()
         {
-            return Resources.Address.UsStateAbbr.Split(Config.Separator).Random();
+            return Resources.Address.UsStateAbbr.Split(Config.Separator)
+                .Random();
         }
 
         public static string CityPrefix()
         {
-            return Resources.Address.CityPrefix.Split(Config.Separator).Random();
+            return Resources.Address.CityPrefix.Split(Config.Separator)
+                .Random();
         }
 
         public static string CitySuffix()
         {
-            return Resources.Address.CitySuffix.Split(Config.Separator).Random();
+            return Resources.Address.CitySuffix.Split(Config.Separator)
+                .Random();
         }
 
         public static string City()
@@ -82,7 +100,8 @@ namespace Faker
 
         public static string StreetSuffix()
         {
-            return Resources.Address.StreetSuffix.Split(Config.Separator).Random();
+            return Resources.Address.StreetSuffix.Split(Config.Separator)
+                .Random();
         }
 
         public static string StreetName()
@@ -93,32 +112,46 @@ namespace Faker
 
         public static string StreetAddress(bool includeSecondary = false)
         {
-            return StreetAddressFormats.Random().Numerify() + (includeSecondary ? " " + SecondaryAddress() : "");
+            return StreetAddressFormats.Random()
+                .Numerify() + (includeSecondary ? " " + SecondaryAddress() : "");
         }
 
         public static string SecondaryAddress()
         {
-            return Resources.Address.SecondaryAddress.Split(Config.Separator).Random().Trim().Numerify();
+            return Resources.Address.SecondaryAddress.Split(Config.Separator)
+                .Random()
+                .Trim()
+                .Numerify();
         }
 
         public static string UkCounty()
         {
-            return Resources.Address.UkCounties.Split(Config.Separator).Random().Trim();
+            return Resources.Address.UkCounties.Split(Config.Separator)
+                .Random()
+                .Trim();
         }
 
         public static string UkCountry()
         {
-            return Resources.Address.UkCountry.Split(Config.Separator).Random().Trim();
+            return Resources.Address.UkCountry.Split(Config.Separator)
+                .Random()
+                .Trim();
         }
 
         public static string UkPostCode()
         {
-            return Resources.Address.UkPostCode.Split(Config.Separator).Random().Trim().Numerify().Letterify();
+            return Resources.Address.UkPostCode.Split(Config.Separator)
+                .Random()
+                .Trim()
+                .Numerify()
+                .Letterify();
         }
 
         public static string CaProvince()
         {
-	        return Resources.Address.CaProvince.Split(Config.Separator).Random().Trim();
+            return Resources.Address.CaProvince.Split(Config.Separator)
+                .Random()
+                .Trim();
         }
     }
 }

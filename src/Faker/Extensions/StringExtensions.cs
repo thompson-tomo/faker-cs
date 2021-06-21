@@ -1,4 +1,5 @@
 ﻿using System.Text.RegularExpressions;
+
 // ReSharper disable CheckNamespace
 
 namespace Faker.Extensions
@@ -12,7 +13,8 @@ namespace Faker.Extensions
         /// </summary>
         public static string Numerify(this string s)
         {
-            return Regex.Replace(s, "#", m => RandomNumber.Next(0, 9).ToString(), RegexOptions.Compiled);
+            return Regex.Replace(s, "#", m => RandomNumber.Next(0, 9)
+                .ToString(), RegexOptions.Compiled);
         }
 
         /// <summary>

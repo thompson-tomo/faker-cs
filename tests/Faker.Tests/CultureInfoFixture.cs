@@ -5,21 +5,18 @@ using NUnit.Framework;
 namespace Faker.Tests
 {
     /// <summary>
-    /// Creating a new CultureInfo (like 'en-bork' from the original Ruby Faker gem) requires windows *admin privileges* according to
-    /// http://msdn.microsoft.com/en-us/library/ms172469(v=VS.85).aspx
-    /// That's why 
-    ///     (1) we take en-US as default and 
-    ///     (2) require de-DE to have an 'extra word' at the beginning of the list within the resx file. 
-    ///         In other words: This 'extra word' must differ from the first word in the default (en-US) resx file.
-    /// 
-    /// And no, we can't access Resource files from another dll directly.
+    ///     Creating a new CultureInfo (like 'en-bork' from the original Ruby Faker gem) requires windows *admin privileges*
+    ///     according to
+    ///     http://msdn.microsoft.com/en-us/library/ms172469(v=VS.85).aspx
+    ///     That's why
+    ///     (1) we take en-US as default and
+    ///     (2) require de-DE to have an 'extra word' at the beginning of the list within the resx file.
+    ///     In other words: This 'extra word' must differ from the first word in the default (en-US) resx file.
+    ///     And no, we can't access Resource files from another dll directly.
     /// </summary>
     [TestFixture]
     public class CultureInfoFixture
     {
-        private const string DefaultCultureInfoString = "en-US";
-
-        #region Setup/TearDown
         [SetUp]
         public void Setup()
         {
@@ -30,10 +27,10 @@ namespace Faker.Tests
         public void TearDown()
         {
             SetCultureToDefault();
-        } 
-        #endregion
+        }
 
-        #region TESTS
+        private const string DefaultCultureInfoString = "en-US";
+
         [Test]
         public void Should_Be_Default()
         {
@@ -48,16 +45,13 @@ namespace Faker.Tests
             var expected = GetFirstGermanWord();
             var actual = Lorem.GetFirstWord();
             Assert.AreNotEqual(expected, actual);
-        } 
-        #endregion
+        }
 
-        #region Helper
         private void SetCultureToDefault()
         {
             var theDefault = new CultureInfo(DefaultCultureInfoString);
             Thread.CurrentThread.CurrentCulture = theDefault;
             Thread.CurrentThread.CurrentUICulture = theDefault;
-
         }
 
         private void SetCurrentCulture(string cultureInfoString)
@@ -78,6 +72,5 @@ namespace Faker.Tests
             SetCultureToDefault();
             return result;
         }
-        #endregion
     }
 }

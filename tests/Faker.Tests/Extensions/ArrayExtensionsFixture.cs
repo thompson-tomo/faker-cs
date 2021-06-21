@@ -18,7 +18,7 @@ namespace Faker.Tests.Extensions
         [Test]
         public void Should_Return_Single_Item_From_Array()
         {
-            var s = new [] { "Foo" }.Random();
+            var s = new[] {"Foo"}.Random();
             Assert.AreEqual("Foo", s);
         }
 
@@ -27,8 +27,9 @@ namespace Faker.Tests.Extensions
         {
             var input = new[] {"a", "b", "c"};
             var result = 100.Times(x => input.Random());
-            
-            Assert.AreEqual(3, result.Distinct().Count());
+
+            Assert.AreEqual(3, result.Distinct()
+                .Count());
         }
     }
 }

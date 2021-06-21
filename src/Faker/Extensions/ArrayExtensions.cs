@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+
 // ReSharper disable CheckNamespace
 
 namespace Faker.Extensions
@@ -24,7 +25,8 @@ namespace Faker.Extensions
         {
             if (!list.Any()) throw new InvalidOperationException("Enumerable list must contain at least one item");
 
-            return list.ElementAt(RandomNumber.Next(0, list.Count() - 1)).Invoke();
+            return list.ElementAt(RandomNumber.Next(0, list.Count() - 1))
+                .Invoke();
         }
 
         /// <summary>
@@ -34,7 +36,8 @@ namespace Faker.Extensions
         {
             if (!list.Any()) throw new InvalidOperationException("Enumerable list must contain at least one item");
 
-            return list.ElementAt(RandomNumber.Next(0, list.Count() - 1)).Invoke();
+            return list.ElementAt(RandomNumber.Next(0, list.Count() - 1))
+                .Invoke();
         }
     }
 }

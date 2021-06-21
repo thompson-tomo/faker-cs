@@ -20,7 +20,8 @@ namespace Faker
 
         public static string Suffix()
         {
-            return Resources.Company.Suffix.Split(Config.Separator).Random();
+            return Resources.Company.Suffix.Split(Config.Separator)
+                .Random();
         }
 
         /// <summary>
@@ -29,9 +30,12 @@ namespace Faker
         /// </summary>
         public static string CatchPhrase()
         {
-            return string.Join(" ", Resources.Company.Buzzwords1.Split(Config.Separator).Random(),
-                Resources.Company.Buzzwords2.Split(Config.Separator).Random(),
-                Resources.Company.Buzzwords3.Split(Config.Separator).Random());
+            return string.Join(" ", Resources.Company.Buzzwords1.Split(Config.Separator)
+                    .Random(),
+                Resources.Company.Buzzwords2.Split(Config.Separator)
+                    .Random(),
+                Resources.Company.Buzzwords3.Split(Config.Separator)
+                    .Random());
         }
 
         /// <summary>
@@ -40,9 +44,12 @@ namespace Faker
         /// </summary>
         public static string BS()
         {
-            return string.Join(" ", Resources.Company.BS1.Split(Config.Separator).Random(),
-                Resources.Company.BS2.Split(Config.Separator).Random(),
-                Resources.Company.BS3.Split(Config.Separator).Random());
+            return string.Join(" ", Resources.Company.BS1.Split(Config.Separator)
+                    .Random(),
+                Resources.Company.BS2.Split(Config.Separator)
+                    .Random(),
+                Resources.Company.BS3.Split(Config.Separator)
+                    .Random());
         }
     }
 }

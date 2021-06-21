@@ -6,7 +6,10 @@ namespace Faker
     {
         public static string Number()
         {
-            return Resources.Phone.Formats.Split(Config.Separator).Random().Trim().Numerify();
+            return Resources.Phone.Formats.Split(Config.Separator)
+                .Random()
+                .Trim()
+                .Numerify();
         }
     }
 }
