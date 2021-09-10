@@ -70,5 +70,23 @@ namespace Faker.Tests
 
             Assert.IsTrue(result);
         }
+
+
+        [Test]
+        public void Should_Generate_Values_Greater_Than_Zero()
+        {
+            var result = true;
+            for (var i = 0; i < 1000; i++)
+            {
+                var number = RandomNumber.Next();
+                if (number < 0)
+                {
+                    result = false;
+                    break;
+                }
+            }
+
+            Assert.IsTrue(result);
+        }
     }
 }

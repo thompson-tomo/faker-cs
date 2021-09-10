@@ -11,11 +11,11 @@ namespace Faker
         {
             var bytes = new byte[sizeof(int)]; // 4 bytes
             generator.GetNonZeroBytes(bytes);
-            var val = BitConverter.ToInt32(bytes, 0);
+            var val = BitConverter.ToUInt32(bytes, 0);
             // constrain our values to between our min and max
             // https://stackoverflow.com/a/3057867/86411C:\Work\GitHub\faker-cs\src\Faker\RandomNumber.cs
             var result = ((val - min) % (max - min + 1) + (max - min) + 1) % (max - min + 1) + min;
-            return result;
+            return (int)result;
         }
 
         public static int Next()
