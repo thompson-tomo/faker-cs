@@ -25,7 +25,7 @@ namespace Faker
             generator.GetNonZeroBytes(bytes);
             var val = BitConverter.ToInt32(bytes, 0);
             var result = ((val - min) % (max - min + 1) + (max - min) + 1) % (max - min + 1) + min;
-            return (int)result;
+            return result;
         }
 
         public static int Next()
