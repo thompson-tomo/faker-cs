@@ -12,7 +12,7 @@ namespace Faker.Tests.Extensions
         public void Should_Throw_Exception_For_Empty_Array()
         {
             var exception = Assert.Throws<InvalidOperationException>(() => new string[] { }.Random());
-            Assert.AreEqual("Array must contain at least one item", exception.Message);
+            Assert.AreEqual("Array must contain at least one item", exception?.Message);
         }
 
         [Test]

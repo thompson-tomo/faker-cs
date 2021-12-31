@@ -5,6 +5,7 @@
     <RootNamespace>Faker.Tests</RootNamespace>
     <LangVersion>8.0</LangVersion>
     <AssemblyName>Faker.Tests.Net.5.0</AssemblyName>
+    <OutputType>Library</OutputType>
   </PropertyGroup>
 
   <ItemGroup>

@@ -1,14 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29806.167
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{190F9160-395D-4CEF-BEEE-805099D7E2E0}"
 	ProjectSection(SolutionItems) = preProject
 		src\Faker\Properties\AssemblyInfo.cs = src\Faker\Properties\AssemblyInfo.cs
+		src\Faker\Properties\SharedAssemblyInfo.cs = src\Faker\Properties\SharedAssemblyInfo.cs
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Faker.Net.4.0", "src\Faker.Net.4.0\Faker.Net.4.0.csproj", "{FFB599BB-8FCA-4A01-A159-4D764A33E755}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Faker.Net.4.5", "src\Faker.Net.4.5\Faker.Net.4.5.csproj", "{977F04DE-CEDD-47DF-A574-0D9FD88BDDDB}"
 EndProject
@@ -39,7 +38,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Faker.Net.5.0", "src\Faker.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Faker.Tests.Net.5.0", "tests\Faker.Tests.Net.5.0\Faker.Tests.Net.5.0.csproj", "{5E0FC59C-B443-4946-99FD-5EFC5DCFB149}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Faker.Tests.Net.4.0", "tests\Faker.Tests.Net.4.0\Faker.Tests.Net.4.0.csproj", "{15B2EBF6-B443-412A-883F-0FE6D634A4FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Faker.Net.6.0", "src\Faker.Net.6.0\Faker.Net.6.0.csproj", "{3E35619D-412B-4176-82A9-265227111FF6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Faker.Tests.Net.6.0", "tests\Faker.Tests.Net.6.0\Faker.Tests.Net.6.0.csproj", "{53C739F7-F6AC-4100-A9C1-DC57D054DF70}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +48,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FFB599BB-8FCA-4A01-A159-4D764A33E755}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FFB599BB-8FCA-4A01-A159-4D764A33E755}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FFB599BB-8FCA-4A01-A159-4D764A33E755}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FFB599BB-8FCA-4A01-A159-4D764A33E755}.Release|Any CPU.Build.0 = Release|Any CPU
 		{977F04DE-CEDD-47DF-A574-0D9FD88BDDDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{977F04DE-CEDD-47DF-A574-0D9FD88BDDDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{977F04DE-CEDD-47DF-A574-0D9FD88BDDDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -95,10 +92,14 @@ Global
 		{5E0FC59C-B443-4946-99FD-5EFC5DCFB149}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E0FC59C-B443-4946-99FD-5EFC5DCFB149}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E0FC59C-B443-4946-99FD-5EFC5DCFB149}.Release|Any CPU.Build.0 = Release|Any CPU
-		{15B2EBF6-B443-412A-883F-0FE6D634A4FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{15B2EBF6-B443-412A-883F-0FE6D634A4FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{15B2EBF6-B443-412A-883F-0FE6D634A4FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{15B2EBF6-B443-412A-883F-0FE6D634A4FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E35619D-412B-4176-82A9-265227111FF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E35619D-412B-4176-82A9-265227111FF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E35619D-412B-4176-82A9-265227111FF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E35619D-412B-4176-82A9-265227111FF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53C739F7-F6AC-4100-A9C1-DC57D054DF70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53C739F7-F6AC-4100-A9C1-DC57D054DF70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53C739F7-F6AC-4100-A9C1-DC57D054DF70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53C739F7-F6AC-4100-A9C1-DC57D054DF70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -106,7 +107,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{829BDFF1-A65E-456B-B55E-1D1B7043D939} = {E206613A-09A6-4EAF-A643-E67D8ACA71DA}
 		{5E0FC59C-B443-4946-99FD-5EFC5DCFB149} = {E206613A-09A6-4EAF-A643-E67D8ACA71DA}
-		{15B2EBF6-B443-412A-883F-0FE6D634A4FB} = {E206613A-09A6-4EAF-A643-E67D8ACA71DA}
+		{53C739F7-F6AC-4100-A9C1-DC57D054DF70} = {E206613A-09A6-4EAF-A643-E67D8ACA71DA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B8DFC42C-B0BF-4EC1-852D-CD82AE728643}

@@ -60,7 +60,7 @@ namespace Faker
         /// <param name="max">Inclusive</param>
         /// <param name="conditionFn">All values are valid if not specified</param>
         /// <returns></returns>
-        private static IEnumerable<int> Range(int min, int max, Func<int, bool> conditionFn = null)
+        private static IEnumerable<int> Range(int min, int max, Func<int, bool> conditionFn)
         {
             var range = new List<int>();
             conditionFn ??= z => true;

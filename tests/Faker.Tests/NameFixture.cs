@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Text.RegularExpressions;
 using NUnit.Framework;
+#pragma warning disable CS8618
 
 namespace Faker.Tests
 {

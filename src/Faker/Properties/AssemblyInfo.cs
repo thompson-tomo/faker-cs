@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Faker.Net")]
-[assembly: AssemblyCopyright("Copyright © 2020")]
+[assembly: AssemblyCopyright("Copyright © 2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -17,5 +17,6 @@ using System.Runtime.InteropServices;
 
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
-[assembly: InternalsVisibleTo("Faker.Tests.Net.4.0")]
 [assembly: InternalsVisibleTo("Faker.Tests.Net.4.8")]
+[assembly: InternalsVisibleTo("Faker.Tests.Net.5.0")]
+[assembly: InternalsVisibleTo("Faker.Tests.Net.6.0")]

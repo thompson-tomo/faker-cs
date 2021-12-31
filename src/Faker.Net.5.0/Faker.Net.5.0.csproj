@@ -29,6 +29,7 @@
     <Compile Include="..\Faker\Lorem.cs" Link="Lorem.cs" />
     <Compile Include="..\Faker\Name.cs" Link="Name.cs" />
     <Compile Include="..\Faker\Phone.cs" Link="Phone.cs" />
+    <Compile Include="..\Faker\Properties\SharedAssemblyInfo.cs" Link="Properties\SharedAssemblyInfo.cs" />
     <Compile Include="..\Faker\RandomNumber.cs" Link="RandomNumber.cs" />
     <Compile Include="..\Faker\Resources\Address.Designer.cs" Link="Resources\Address.Designer.cs" />
     <Compile Include="..\Faker\Resources\Company.Designer.cs" Link="Resources\Company.Designer.cs" />
@@ -65,6 +66,7 @@
   <ItemGroup>
     <Folder Include="Extensions\" />
     <Folder Include="Helpers\" />
+    <Folder Include="Properties\" />
   </ItemGroup>
 
 </Project>
