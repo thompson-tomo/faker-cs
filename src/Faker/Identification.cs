@@ -213,20 +213,22 @@ namespace Faker
                 .Substring(2, 2));
 
             //Maximum number of days in every month
-            var monthsData = new List<KeyValuePair<int, int>>();
-            monthsData.Add(new KeyValuePair<int, int>(1, 31));
-            monthsData.Add(new KeyValuePair<int, int>(2,
-                28)); // I don`t think is that important to add support for 29 of February
-            monthsData.Add(new KeyValuePair<int, int>(3, 31));
-            monthsData.Add(new KeyValuePair<int, int>(4, 30));
-            monthsData.Add(new KeyValuePair<int, int>(5, 31));
-            monthsData.Add(new KeyValuePair<int, int>(6, 30));
-            monthsData.Add(new KeyValuePair<int, int>(7, 31));
-            monthsData.Add(new KeyValuePair<int, int>(8, 31));
-            monthsData.Add(new KeyValuePair<int, int>(9, 30));
-            monthsData.Add(new KeyValuePair<int, int>(10, 31));
-            monthsData.Add(new KeyValuePair<int, int>(11, 30));
-            monthsData.Add(new KeyValuePair<int, int>(12, 31));
+            var monthsData = new List<KeyValuePair<int, int>>
+            {
+                new KeyValuePair<int, int>(1, 31),
+                new KeyValuePair<int, int>(2,
+                    28), // I don`t think is that important to add support for 29 of February
+                new KeyValuePair<int, int>(3, 31),
+                new KeyValuePair<int, int>(4, 30),
+                new KeyValuePair<int, int>(5, 31),
+                new KeyValuePair<int, int>(6, 30),
+                new KeyValuePair<int, int>(7, 31),
+                new KeyValuePair<int, int>(8, 31),
+                new KeyValuePair<int, int>(9, 30),
+                new KeyValuePair<int, int>(10, 31),
+                new KeyValuePair<int, int>(11, 30),
+                new KeyValuePair<int, int>(12, 31)
+            };
             //Get Random day in current month
             var dayDigit = r.Next(1, monthsData.Where(x => x.Key == monthDigit)
                 .Select(y => y.Value)
@@ -257,10 +259,7 @@ namespace Faker
             var controlNumber = weigthSums % 11;
 
             //Get the control number
-            if (controlNumber < 10)
-                PIN.Append(controlNumber.ToString());
-            else
-                PIN.Append("0");
+            PIN.Append(controlNumber < 10 ? controlNumber.ToString() : "0");
             return PIN.ToString();
         }
     }
