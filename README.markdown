@@ -55,7 +55,6 @@ var bulgarianPin = Faker.Identification.BulgarianPin(); //6402142606
 
 Supported versions:
 
-	.NET framework 4.0,
 	.NET framework 4.5,
 	.NET framework 4.6,
 	.NET framework 4.7,
@@ -64,11 +63,13 @@ Supported versions:
 	.NET Standard 2.1,
 	.NET Core 3.0,
 	.NET Core 3.1,
-	.NET 5.0
+	.NET 5.0,
+	.NET 6.0
 
 No longer supported in nuGet package (1.1 going forward):
 
 	.NET framework 3.5 SP1,
+	.NET framework 4.0,
 	Silverlight 3.0,
 	Silverlight 4.0,
 	Silverlight 5.0,
