@@ -23,6 +23,7 @@
 	<Description>C# port of the Ruby Faker gem (http://faker.rubyforge.org/) and is used to easily generate fake data: names, addresses, phone numbers, etc.</Description>
 	<Authors>Ben Smith,Ollie Riches,Robin Michael</Authors>
 	<PackageId>Faker.Net</PackageId>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<RepositoryUrl>https://github.com/oriches/faker-cs</RepositoryUrl>
   </PropertyGroup>
 
